@@ -1,0 +1,367 @@
+<% provide(:title, 'Home') %>
+<%= stylesheet_link_tag 'common.css' %>
+
+<div class="p-header">
+        <div id="home" class="big-bg">
+                <header class="page-header wrapper">
+                    <h1>
+                        <%= link_to root_path do %>
+                        <%= image_tag 'home/ratio_logo_painted02.png' ,class: 'logo' %>
+                        <% end %>
+                    </h1>
+                            <nav>
+                                <ul class="main-nav">
+                                    <li><%= link_to 'Home', root_path %></li>
+                                    <li><%= link_to 'News', '#' %></li>
+                                    <li class="menu__single"><a>About</a>
+                                        <ul class="menu__second-level">
+                                            <li><%= link_to 'Concept', root_path(anchor: 'concept')%></li>
+                                            <li><%= link_to 'Staff', root_path(anchor: 'staff')%></li>
+                                        </ul>
+                                    </li>
+                                    <li><%= link_to 'Menu', root_path(anchor: 'menu')%></li>
+                                    <li><%= link_to 'Style', '#'%></li>
+                                    <li><%= link_to 'Product', '#'%></li>
+                                    <li><%= link_to 'Access', root_path(anchor: 'access')%></li>
+                                </ul><!--main-nav-->
+                                </nav>
+                </header><!---page-header wapper-->
+        </div>
+</div><!--p-header-->
+<div class="m-header-nav">
+        <header class="page-header wrapper">
+                <h1>
+                    <%= link_to root_path do %>
+                    <%= image_tag 'home/ratio_logo_painted02.png' ,class: 'logo' %>
+                    <% end %>
+                </h1>
+                <div class="menu-trigger" href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                </div>
+        </header><!--page-header wrapper-->
+        <div id="home" class="big-bg"></div>
+        <nav>
+            <ul class="main-nav">
+                <li><%= link_to 'Home', root_path %></li>
+                <li><%= link_to 'News', '#' %></li>
+                <li class="menu__single"><a>About</a>
+                    <ul class="menu__second-level">
+                        <li><%= link_to 'Concept', root_path(anchor: 'concept')%></li>
+                        <li><%= link_to 'Staff', root_path(anchor: 'staff')%></li>
+                    </ul>
+                </li>
+                <li><%= link_to 'Menu', root_path(anchor: 'menu')%></li>
+                <li><%= link_to 'Style', '#'%></li>
+                <li><%= link_to 'Product', '#'%></li>
+                <li><%= link_to 'Access', root_path(anchor: 'access')%></li>
+            </ul><!--main-nav-->
+        </nav>
+</div>
+<div id="top-news-container">
+            <div class="wrapper">
+            <h2 class="page-title effect-fade-down"><span>-</span> News <span>-</span></h2>
+            </div><!--/.wrapper-->
+            <article id="top-posts">
+            <div class="news-1">
+                <a href="#"><%= image_tag 'home/news_thumb1.jpg'%></a>
+                <p class="news-date">2019.11.14</p>
+                <h1>価格変更のお知らせ</h1>
+                <p class="news-text">
+                みなさんいかがお過ごしですか。レシオ美容室はこの度消費増税により...
+                </p>
+                <div class="top-news-btn"><a href="#">Read More</a></div>
+            </div>
+            <div class="news-2">
+                    <a href="#"><%= image_tag 'home/news_thumb2.jpg'%></a>
+                <p class="news-date">2019.10.09</p>
+                <h1>学割キャンペーン実施中</h1>
+                <p></p>
+                <div class="top-news-btn"><a href="#">Read More</a></div>
+            </div>
+            <div class="news-3">
+                    <a href="#"><%= image_tag 'home/news_thumb3.jpg'%></a>
+                <p class="news-date">2019.10.02</p>
+                <h1>台風に伴う臨時休業のお知らせ</h1>
+                <p></p>
+                <div class="top-news-btn"><a href="#">Read More</a></div>
+            </div>
+            </article><!--top-posts-->
+</div><!--top-news-container-->
+<div id="concept"  class="anchor">
+        <div class="wrapper">
+                <h2 class="page-title effect-fade-up"><span>-</span> Concept <span>-</span></h2>
+        </div><!--/.wrapper-->
+        <div class="first-text effect-fade-down">
+        <p>忙しい日常を離れた　くつろぎの時間を、、、</p>
+        <p>楽しい会話が弾みます</p>
+        </div>
+        <div class="items-container">
+                <div class="items img-1"><%= image_tag 'home/concept1.png'%></div>
+                <div class="items content-1">
+                    <h1>「人生の節目」に、</h1>
+                <p>そっと寄り添えるような<br>
+                        <br>
+                    温かみのあるサロン作りを心掛けております。
+                    </p>
+                </div>
+                <div class="items content-2">
+                    <h1 >&nbsp;ヘアーだけでなく、</h1>
+                    <p>『アレンジ』『メイク』『着付け』なども<br>
+                        <br>
+                        行っておりますのでお気軽にお尋ねください。
+                    </p>
+                </div>
+                <div class="items img-2"><%= image_tag 'home/concept2.png'%></div>
+                <div class="items img-3"><%= image_tag 'home/concept3.png'%></div>
+                <div class="items content-3">
+                    <h1>&nbsp;お一人おひとりと、</h1>
+                    <p>『完全予約制』ですので<br>
+                        <br>
+                        気兼ねのない時間を過ごせることをお約束します。<br>
+                        <br>
+                        ぜひratio美容室にお越しくださいませ、、、
+                    </p>
+                </div>
+        </div><!--item-container-->
+</div><!--concept-->
+<div id="home-style">
+    <div class="wrapper">
+            <h2 class="page-title effect-fade-down"><span>-</span>Style<span>-</span></h2>
+    </div><!--/.wrapper-->
+    <div class="wrapper grid">
+            <div class="item home-img-fade-up">
+                <%= image_tag 'home/model_sample1.jpg'%>
+            </div>
+            <div class="item home-img-fade-up">
+                <%= image_tag 'home/model_sample2.jpeg'%>
+            </div>
+            <div class="item home-img-fade-up">
+                <%= image_tag 'home/model_sample3.jpg'%>
+            </div>
+            <div class="item home-img-fade-up">
+                <%= image_tag 'home/model_sample4.jpg'%>
+            </div>
+            <div class="item home-img-fade-up">
+                <%= image_tag 'home/model_sample5.jpg'%>
+            </div>
+            <div class="item home-img-fade-up">
+                <%= image_tag 'home/model_sample6.jpeg'%>
+            </div>
+    </div><!--wrapper grid-->
+</div><!--style-->
+<div id="menu" class="anchor">
+<div class="wrapper">
+    <h2 class="page-title effect-fade-down"><span>-</span>Menu<span>-</span></h2>
+</div><!--/.wrapper-->
+<div class="col effect-fade-up">
+    <dl>
+        <dt>Cut</dt>
+        <dd>¥3300</dd>
+    </dl>
+    <dl>
+        <dt>Color</dt>
+        <dd class="from">¥4000</dd>
+    </dl>
+    <dl>
+        <dt>Perm</dt>
+        <dd class="from">¥3000</dd>
+    </dl>
+    <dl>
+        <dt class="from">Straight Perm</dt>
+        <dd>¥4500</dd>
+    </dl>
+    <dl>
+        <dt>Shampoo</dt>
+        <dd class="from">¥800</dd>
+    </dl>
+    <dl>
+        <dt>Carbonic Shampoo</dt>
+        <dd>¥500</dd>
+    </dl>
+    <dl>
+        <dt>Treatment</dt>
+        <dd class="from">¥2500</dd>
+    </dl>
+    <dl>
+        <dt>Hair Up</dt>
+        <dd class="from">¥4000</dd>
+    </dl>
+    <dl>
+        <dt>Make</dt>
+        <dd class="from">¥2000</dd>
+    </dl>
+    <dl>
+        <dt>Dressing(着付け)</dt>
+        <dd class="from">¥5000</dd>
+    </dl>
+    <div class="notes">
+        <p>・表示価格は全て税込です。</p>
+        <p>・詳細などお問い合わせはお電話にてご確認ください。</p>
+    </div>
+</div><!--col-->
+</div><!--menu-->
+<div id="staff" class="anchor">
+    <div class="wrapper">
+        <h2 class="page-title effect-fade-down"><span>-</span>Staff<span>-</span></h2>
+    </div><!--/.wrapper-->
+    <div class="staff-contents">
+        <div class="staff-img effect-fade-up"><%= image_tag 'home/staff_sample.jpeg'%></div>
+        <div class="intro effect-fade-up">
+            <h1>owner/stylist</h1>
+            <p class="staff-name">岩田　由美</p>
+            <p class="staff-en-name">[Yumi Iwata]</p>
+            <p>茨城県水戸市出身。<br>
+            <br>
+            東京マックス美容学校卒業後、<br>
+            都内美容室でキャリアをスタート。<br>
+            <br>
+            平成2年に福井市へ転入。<br>
+            市内美容室ではチーフを務める。<br>
+            <br>
+            平成13年にratio美容室を開業し独立。
+            </p>
+        </div>
+    </div>
+</div><!--staff-->
+<div class="pro-news-wrapper">
+    <div id="product-part">
+        <div class="wrapper">
+            <h2 class="page-title"><span>-</span>Product<span>-</span></h2>
+        </div><!--/.wrapper-->
+        <div class="contents">
+            <p>ratio美容室オススメの商品をご紹介します。</p>
+            <%= image_tag 'home/home_product_sample.jpg'%>
+            <div class="detail-btn"><a href="product.html">詳細はこちら</a></div>
+        </div><!--contents-->
+    </div><!--product-part-->
+    <div id="news-part">
+        <div class="wrapper">
+            <h2 class="page-title"><span>-</span>News<span>-</span></h2>
+        </div><!--/.wrapper-->
+        <ul class="posts">
+            <a href="#">
+                <li>
+                    <div class="post-cont-wrapper">
+                        <div class="post-image"><%= image_tag 'home/news_thumb1.jpg'%></div>
+                        <div class="post-body">
+                            <div class="post-meta">2019.11.14</div>
+                            <div class="post-title"><span>価格変更のお知らせ</span></div>
+                        </div>
+                    </div>
+                </li>
+            </a>
+            <a href="#">
+                    <li>
+                            <div class="post-cont-wrapper">
+                            <div class="post-image"><%= image_tag 'home/news_thumb2.jpg'%></div>
+                            <div class="post-body">
+                                <div class="post-meta">2019.10.09</div>
+                                <div class="post-title">学割キャンペーン実施中</div>
+                            </div>
+                            </div>
+                    </li>
+            </a>
+            <a href="#">
+                <li>
+                        <div class="post-cont-wrapper">
+                            <div class="post-image"><%= image_tag 'home/news_thumb3.jpg'%></div>
+                            <div class="post-body">
+                                <div class="post-meta">2019.10.02</div>
+                                <div class="post-title">台風に伴う臨時休業のお知らせ</div>
+                            </div>
+                        </div>
+                </li>
+            </a>
+        </ul><!--posts-->
+    </div><!--news-part-->
+</div><!--pro-news-part-->
+<div id="access" class="anchor">
+    <div class="wrapper">
+        <h2 class="page-title effect-fade-down"><span>-</span>Access<span>-</span></h2>
+    </div><!--/.wrapper-->
+    <div class="contents">
+        <div class="textbox effect-fade-up">
+            <dl>
+                <dt>ADDRESS</dt>
+                <dd>〒910-0001<br>
+                    福井県福井市大願寺2丁目6-5
+                </dd>
+            </dl>
+            <dl>
+                <dt>TEL</dt>
+                <dd>0776-21-6343<br>
+                    <span>※完全予約制です。お気軽にお電話ください。</span>
+                </dd>
+            </dl>
+            <dl>
+                <dt>OPEN</dt>
+                <dd>9:00~18:00<br>
+                    <span>木・金曜日はナイター実施中</span>
+                </dd>
+            </dl>
+            <dl>
+                <dt>CLOSE</dt>
+                <dd>月曜日・第1・5日曜日</dd>
+            </dl>
+        </div>
+        <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3224.4368475345987!2d136.22765161426193!3d36.08283771545091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff8bfb34d1756dd%3A0xf703423928907209!2z44CSOTEwLTAwMDEg56aP5LqV55yM56aP5LqV5biC5aSn6aGY5a-677yS5LiB55uu77yW4oiS77yV!5e0!3m2!1sja!2sjp!4v1572770187876!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+        <div id="for-mobile-map-btn" class="effect-fade-up">
+            <a href="https://goo.gl/maps/MFVP8TRzf6rDs9xG6">
+                Mapを見る
+            </a>
+        </div>
+    </div>
+</div><!--access-->
+<div id="home-charity">
+    <div class="wrapper">
+        <h2 class="page-title effect-fade-down"><span>-</span>Charity<span>-</span></h2>
+    </div><!--/.wrapper-->
+    <div class="contents">
+        <div class="text effect-fade-down"><p>ratio美容室は</div>
+        <div class="images effect-fade-up">
+            <%= image_tag 'home/ratio_logo_painted02.png', class: 'ratio-logo'%>
+            <%= image_tag 'home/cross.png', class: 'cross'%>
+            <%= image_tag 'home/hair_donation.png', class: 'donation-pic'%>
+
+        </div><!--images-->
+        <div class="text effect-fade-up">
+            <p>Japan Hair Donation & Charity(ジャーダック)を通じた</p>
+            <p>社会貢献に協力しております。</p>
+        </div><!--text-->
+        <div class="detail-btn effect-fade-up"><a href="charity.html">詳細はこちら</a></div>
+    </div><!--contents-->
+</div><!--charity-->
+<footer>
+    <div class="contents">
+        <div class="shop-info">
+            <h1>Shop Info</h1>
+            <p>
+                〒910-0001<br>
+                福井県福井市大願寺2丁目6−5<br>
+                <br>
+                TEL 0776-21-6343<br>
+                <br>
+                OPEN 9:00~1800<br>
+                <br>
+                CLOSE 毎週月曜日・第1・5日曜日
+            </p>
+        </div>
+        <div class="line-officail">
+            <h1>LINE official account</h1>
+            <div class="line-btn"><a href="#">友達追加</a></div>
+            <p><span>(サービスや商品の情報を発信します。)</span></p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p><small>&copy; 2019 ratio美容室</small></p>
+        <p><small>Designed By Ryo Iwata</small></p>
+    </div>
+</footer><!--footer-->
+<p id="pageTop"><a href="#"><i class="fa fa-chevron-up"></i></a></p>
+
+<%= javascript_include_tag "common.js" %>
+<%= javascript_include_tag "index.js" %>
