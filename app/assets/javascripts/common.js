@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded',function(){
        $('.menu-trigger').removeClass('active');
      }
    });
-   let second_level_opened = false;
+   var second_level_opened = false;
    function status (){
     second_level_opened = true;
    };
