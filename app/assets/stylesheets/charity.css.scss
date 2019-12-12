@@ -1,0 +1,114 @@
+/* CHARITY */
+
+#charity{
+    position: relative;
+    text-align: center;
+    background-image: url(../../images/charity_header.jpg);
+    background-size: cover;
+    height:650px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 100px;
+}
+#charity{
+    font-size:1.125rem;
+}
+#charity .shape{
+    top:58%;
+}
+#charity .page-title{
+    font-size: 3.125rem;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+#charity .contents{
+    max-width: 900px;
+    margin: 0 auto;
+}
+#charity .images{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#charity .text{
+    margin-bottom: 30px;
+}
+.hd-contents{
+    margin-left:5%;
+    margin-right:5%;
+    text-align: center;
+}
+.hd-contents h1{
+    font-family:"Yu Mincho", "YuMincho";
+    font-weight: normal;
+    border-bottom: solid 2px #33691e;
+    margin-bottom: 50px;
+}
+.hd-contents img{
+    width: 650px;
+    object-position: 0 0;
+    object-fit: cover;
+}
+.hd-contents p{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.hd-contents iframe{
+    width:650px;
+}
+
+@media screen and (max-width: 959px){
+
+    // .donation-pic{
+    //     width: 270px;
+    //     height:100px;
+    // }
+}
+
+@media screen and (max-width: 559px) {
+        /* CHARITY */
+
+        #charity p{
+            font-size:14px;
+        }
+        #charity .page-title{
+            font-size: 2.25rem;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        #charity .text {
+            margin-bottom: 10px;
+        }
+        .hd-contents h1{
+            font-size: 18px;
+        }
+        .hd-contents p{
+            text-align: left;
+            font-size: 14px;
+        }
+        .hd-contents img{
+            width: 100%;
+            height: 250px;
+        }
+        .hd-contents iframe{
+            width:100%;
+            height: 250px;
+        }
+        .images {
+            margin: 20px 5%;
+        }
+        .hd-contents .images .ratio-logo{
+            width: 230px;
+            height: 90px;
+        }
+        .hd-contents .images .cross {
+            width: 30px;
+            height: 30px;
+        }
+        .hd-contents .images .donation-pic {
+            width: 230px;
+            height: 90px;
+        }
+
+}
