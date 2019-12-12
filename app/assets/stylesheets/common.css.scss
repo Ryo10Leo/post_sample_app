@@ -173,7 +173,8 @@ color: #33691e;
 /* HOME */
 
 #home{
-    background-image: url(home/IMG_2929.JPG);
+    /* background-image: image-url(IMG_2929.JPG); */
+    background-image: image-url("home/IMG_2929.JPG");
     background-size: cover;
     background-position: 0% 100%;
     background-repeat: no-repeat;
