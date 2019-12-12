@@ -60,7 +60,9 @@ document.addEventListener('DOMContentLoaded',function(){
   $(window).on('scroll',function(){
     winScrollTop = $(this).scrollTop();
     if (winScrollTop >= startPos　) {
+      if(winScrollTop >= 200){
         $(".m-header-nav .page-header").addClass('hide');
+      }
     } else {
         $(".m-header-nav .page-header").removeClass('hide');
     }
