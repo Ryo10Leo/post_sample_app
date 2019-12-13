@@ -1,0 +1,152 @@
+/* PRODUCT */
+
+#product{
+    margin-bottom: 40px;
+}
+.top-image{
+    object-fit: cover;
+    width: 100%;
+    height:400px;
+    margin-bottom: 80px;
+}
+.page-title{
+    padding-top:35px;
+    padding-bottom: 35px;
+    font-size: 3.125rem;
+    margin-bottom: 20px;
+}
+.title-sub-text{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.pro-contents{
+    margin-top:60px;
+    margin-bottom: 60px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.pro-contents .item{
+    position: relative;
+}
+.pro-contents .item img{
+        height: 350px;
+        width: 100%;
+        object-fit: cover;
+}
+.pro-contents .item img:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.pro-contents .item p{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+/* MODAL_WINDOW */
+.content{
+    margin: 0 auto;
+    padding: 40px;
+}
+.modal{
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+.modal-bg{
+    background-color: rgba(0,0,0,0.8);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+}
+.modal-content{
+    background-color: rgba(255,255,255,1);
+    left: 50%;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    text-align: center;
+    opacity: 1;
+}
+.modal-content img{
+    height: 400px;
+    object-fit: cover;
+    opacity: 1;
+}
+.modal-content h1{
+    font-weight: normal;
+    font-size: 1rem;
+}
+.modal-content .price{
+    text-align: center;
+}
+.modal-content .description{
+    text-align: left;
+}
+
+.close-btn{
+    position: fixed;
+    top: 8px;
+    right: 8px;
+}
+.close-btn .fa{
+    font-size: 30px;
+}
+.close-btn .fa:hover{
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1100px) {
+
+}
+@media screen and (max-width: 959px) {
+    .modal-content{
+        width: 80%;
+    }
+    .top-image{
+        height:350px;
+    }
+}
+@media screen and (max-width: 559px){
+
+    .page-title{
+        font-size: 2.25rem;
+        margin-top: 80px;
+        margin-bottom: 0;
+    }
+    .title-sub-text{
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+    .top-image{
+        margin-bottom: 50px;
+        height:250px;
+    }
+
+    .pro-contents .item img{
+        height: 200px;
+        width: 100%;
+    }
+    .pro-contents .item p {
+        font-size: 12px;
+    }
+    .modal-content{
+        width: 100%;
+    }
+    .modal-content img{
+        height: 200px;
+    }
+    .modal-content .description{
+        font-size: 13px;
+    }
+}

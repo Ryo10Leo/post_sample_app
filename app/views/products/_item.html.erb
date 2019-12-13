@@ -1,0 +1,19 @@
+<% if false %>
+<div class="item">
+    <a class="js-modal-open" data-target="modal-1">
+    <%= image_tag 'product/product1.jpg'%>
+    </a>
+    <p>すごい化粧品</p>
+</div>
+<% end %>
+
+<%# モデルが完成したら導入 %>
+
+<% @products.each do |product|%>
+<div class="item">
+    <a class="js-modal-open" data-target="modal-1">
+    <%= image_tag product.picture %>
+    </a>
+    <p><%= product.name %></p>
+</div>
+<% end %>

@@ -1,0 +1,18 @@
+
+shampoo:
+  name: "good shampoo"
+  price: "3000"
+  description: "very good shampoo"
+  created_at: <%= 3.years.ago %>
+
+cream:
+  name: "flesh cream"
+  price: "1500"
+  description: "super flesh cream"
+  created_at: <%= 2.hours.ago %>
+
+Treatment:
+  name: "lovely treatment"
+  price: "2000"
+  description: "very good shampoo"
+  created_at: <%= Time.zone.now %>
