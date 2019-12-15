@@ -1,0 +1,33 @@
+<% provide(:title, 'Edit Product') %>
+<% provide(:url, product_path) %>
+<% provide(:button_text, 'Edit Product') %>
+<%= stylesheet_link_tag 'form.css' %>
+<%= stylesheet_link_tag 'common.css' %>
+
+<div class="p-header">
+    <div id="product">
+            <%= render 'layouts/header_p'%>
+    </div>
+</div><!--p-header-->
+<div class="m-header-nav">
+    <%= render 'layouts/header_m'%>
+    <%= render 'layouts/header_nav_m'%>
+</div>
+
+<style>
+footer{
+  display:none;
+}
+</style>
+
+<div class="wrapper">
+    <h1 class="form-title">商品編集</h1>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <%= render 'form' %>
+    </div>
+</div>
+</div>
+
+<%= javascript_include_tag "common.js" %>

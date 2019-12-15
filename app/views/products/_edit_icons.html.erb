@@ -1,0 +1,10 @@
+<%#管理者の場合の処理をかく%>
+<% if(true) %>
+    <div class="edit-icons">
+    <%= link_to edit_product_path(object) do%>
+    <i class="fa fa-edit"></i>
+    <% end %>
+    <%= link_to object, method: :delete, data:{confirm:"You sure?"} do %>
+    <i class="fa fa-trash"></i>
+    <% end %>
+<% end %>

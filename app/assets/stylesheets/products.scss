@@ -1,3 +1,4 @@
+
 /* PRODUCT */
 
 #product{
@@ -30,7 +31,7 @@
     position: relative;
 }
 .pro-contents .item img{
-        height: 350px;
+        height: 300px;
         width: 100%;
         object-fit: cover;
 }
@@ -77,9 +78,10 @@
     width: 60%;
     text-align: center;
     opacity: 1;
+    position: relative;
 }
 .modal-content img{
-    height: 400px;
+    height: 250px;
     object-fit: cover;
     opacity: 1;
 }
@@ -106,6 +108,17 @@
     cursor: pointer;
 }
 
+.edit-icons{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.edit-icons i{
+    margin-left:15px ;
+    font-size:1.825rem ;
+    color: #CCCCCC;
+}
 @media screen and (min-width: 1100px) {
 
 }

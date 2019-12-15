@@ -1,0 +1,19 @@
+<div class="item">
+    <a class="js-modal-open" data-target="modal-<%= product.id %>">
+    <%= image_tag product.picture %>
+    </a>
+    <p><%= product.name %></p>
+</div>
+
+<div id="modal-<%= product.id %>" class="modal js-modal">
+    <div class="modal-bg js-modal-close"></div>
+    <div class="modal-content">
+        <div class="close-btn js-modal-close"><i class="fa fa-times-circle"></i></div>
+        <%= image_tag product.picture %>
+        <h1><%= product.name %><h1>
+        <p class="price">¥<%= product.price %></p>
+        <p class="description"><%= product.description %></p>
+        <%= render 'products/edit_icons', object: product %>
+        </div>
+    </div>
+</div>

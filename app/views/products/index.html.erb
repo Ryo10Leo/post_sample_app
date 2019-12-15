@@ -1,4 +1,5 @@
 <% provide(:title, 'Product') %>
+<% provide(:new, new_product_path) %>
 <%= stylesheet_link_tag 'common.css' %>
 <%= stylesheet_link_tag 'products.css' %>
 
@@ -21,31 +22,11 @@
 
     <div class="pro-contents">
             <div class="grid">
-                    <%= render 'products/item'%>
-                    <%= render 'products/modal'%>
-
-                    <div class="item">
-                        <%= image_tag 'product/product2.jpg'%>
-                        <p>写真キャプション写真キャプション</p>
-                    </div>
-                    <div class="item">
-                        <%= image_tag 'product/product3.jpg'%>
-                        <p>写真キャプション写真キャプション</p>
-                    </div>
-                    <div class="item">
-                        <%= image_tag 'product/product4.jpg'%>
-                        <p>写真キャプション写真キャプション</p>
-                    </div>
-                    <div class="item">
-                        <%= image_tag 'product/product5.jpg'%>
-                        <p>写真キャプション写真キャプション</p>
-                    </div>
-                    <div class="item">
-                        <%= image_tag 'product/product6.jpg'%>
-                        <p>写真キャプション写真キャプション</p>
-                    </div>
-                </div>
+                    <%= render @products %>
+            </div>
     </div>
+
+    <%= render 'layouts/new_btn'%>
 
 <%= javascript_include_tag "common.js" %>
 <%= javascript_include_tag "product.js" %>
