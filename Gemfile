@@ -15,6 +15,7 @@ gem 'uglifier',     '3.2.0'
 gem 'coffee-rails', '4.2.2'
 gem 'jquery-rails', '4.3.1'
 gem 'jbuilder',     '2.7.0'
+gem 'rails-i18n'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

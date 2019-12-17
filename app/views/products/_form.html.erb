@@ -16,9 +16,21 @@
     <%= f.text_area :description ,class: 'form-control' %>
     </div>
 
-    <span class="picture">
+     <%= f.label 'サムネイル' %>
+
+      <div id="img_field" onClick="$('#file').click()" >
+
+        <% if f.picture.present? %>
+          <%= image_tag(@product.picture) %>
+        <% else %>
+          <i class="fas fa-image"></i><i class="fas fa-file-upload add"></i>
+        <% end %>
+
+      </div>
+    <%= form.file_field :picture, class: "image", style: "display:none;", id: "file"%>
+   <%# <span class="picture">
     <%= f.file_field :picture,accept: 'image/jpeg,image/gif,image/png' %>
-    </span>
+    <%#</span>%>
     <%= f.hidden_field :picture_cache %>
 
     <%= f.submit yield(:button_text), class: "btn btn-primary" %>

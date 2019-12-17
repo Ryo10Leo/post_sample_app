@@ -25,6 +25,11 @@ class ProductTest < ActiveSupport::TestCase
     assert_not @product.valid?
   end
 
+  test "product picture should be present" do
+    @product.picture = nil
+    assert_not @product.valid?
+  end
+
   test "content should be at most 140 characters" do
     @product.description = "a" * 141
     assert_not @product.valid?

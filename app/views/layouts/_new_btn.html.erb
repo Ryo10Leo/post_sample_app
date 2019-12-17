@@ -1,5 +1,5 @@
 <p id="new-btn">
-    <%= link_to yield(:new) do %>
+    <%= link_to yield(:new), remote: true do %>
         <i class="fa fa-plus"></i>
     <% end %>
 </p>

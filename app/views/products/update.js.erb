@@ -1,0 +1,10 @@
+$(".grid").html("<%= escape_javascript(render(@products)) %>");
+$("#edit-form").removeClass("active");
+$(document).ready(function(){
+    modalDisplay();
+});
+    msg = "編集を保存しました"
+    postSuccessMsg(msg);
+    postBtnUp();
+<%#document.body.addEventListener('ajax:success', function(event) {
+});%>

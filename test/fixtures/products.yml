@@ -5,12 +5,14 @@ shampoo:
   price: "3000"
   description: "very good shampoo"
   created_at: <%= 3.years.ago %>
+  picture: <%= "#{Rails.root}/test/fixtures/default.jpg" %>
 
 cream:
   name: "flesh cream"
   price: "1500"
   description: "super flesh cream"
   created_at: <%= 2.hours.ago %>
+  picture: <%= "#{Rails.root}/test/fixtures/default.jpg" %>
 
 
 Treatment:
@@ -18,4 +20,5 @@ Treatment:
   price: "2000"
   description: "very good shampoo"
   created_at: <%= Time.zone.now %>
+  picture: <%= "#{Rails.root}/test/fixtures/default.jpg" %>
 

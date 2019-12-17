@@ -2,6 +2,7 @@
 <% provide(:new, new_product_path) %>
 <%= stylesheet_link_tag 'common.css' %>
 <%= stylesheet_link_tag 'products.css' %>
+<%= stylesheet_link_tag 'form_sample.css' %>
 
     <div class="p-header">
         <div id="product">
@@ -27,6 +28,15 @@
     </div>
 
     <%= render 'layouts/new_btn'%>
+
+    <div id="new-form">
+    <%= render 'products/new_form_js' %>
+    </div>
+    <div id="edit-form">
+    <%= render 'products/edit_form_js' %>
+    </div>
+
+    <div id="post-success-msg"></div>
 
 <%= javascript_include_tag "common.js" %>
 <%= javascript_include_tag "product.js" %>
