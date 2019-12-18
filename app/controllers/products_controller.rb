@@ -31,7 +31,7 @@ class ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
-    @product.picture.cache! unless @product.picture.blank?
+    # @product.picture.cache! unless @product.picture.blank?
     respond_to do |format|
       format.js
       format.html
@@ -60,6 +60,6 @@ class ProductsController < ApplicationController
 
   def product_params
     params.require(:product).permit(:name, :price, :description,
-                                :picture,:picture_cache)
+                                :picture)
   end
 end
