@@ -1,6 +1,7 @@
 $(".grid").html("<%= escape_javascript(render(@products)) %>");
 $("#new-form").removeClass("active");
 $(document).ready(function(){
+    bodyRemoveFixed();
     modalDisplay();
 });
 

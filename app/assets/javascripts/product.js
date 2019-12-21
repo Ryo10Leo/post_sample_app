@@ -16,9 +16,8 @@ function editFormClose(){
     $('.js-form-close').on('click',function(){
 
         if($('#edit-form').hasClass("active")){
-
             $("#edit-form").removeClass("active");
-
+            bodyRemoveFixed();
         }
     });
     return false;
@@ -47,7 +46,6 @@ function modalDisplay(){
         });
     });
     $('.js-modal-close').on('click',function(){
-        bodyRemoveFixed();
         $('.js-modal').fadeOut();
         return false;
     });

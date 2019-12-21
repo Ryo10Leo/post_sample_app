@@ -1,6 +1,7 @@
 $(".grid").html("<%= escape_javascript(render(@products)) %>");
 $("#edit-form").removeClass("active");
 $(document).ready(function(){
+    bodyRemoveFixed();
     modalDisplay();
 });
     var msg = "編集を保存しました"
