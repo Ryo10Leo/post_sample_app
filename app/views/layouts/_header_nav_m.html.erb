@@ -12,5 +12,10 @@
         <li><%= link_to 'Style', '#'%></li>
         <li><%= link_to 'Product', products_path %></li>
         <li><%= link_to 'Access', root_path(anchor: 'access')%></li>
+        <% if logged_in? %>
+        <li>
+            <%= link_to "Log out", logout_path, method: :delete %>
+        </li>
+        <% end %>
     </ul><!--main-nav-->
 </nav>

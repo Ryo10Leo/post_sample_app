@@ -1,0 +1,52 @@
+<% provide(:title, 'Login') %>
+<%= stylesheet_link_tag 'common.css' %>
+<%= stylesheet_link_tag 'sessions.css' %>
+
+<style>
+
+#pageTop,footer{
+  display:none;
+}
+</style>
+<div class="m-header-nav">
+    <%= render 'layouts/header_m'%>
+    <%= render 'layouts/header_nav_m'%>
+</div>
+
+<div id="formWrapper">
+<div class="p-header">
+    <div id="login">
+            <%= render 'layouts/header_p'%>
+</div>
+</div><!--p-header-->
+  <div id="form">
+    <h1>Login</h1>
+    <% if flash[:danger] %>
+      <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>">
+        <%= message %>
+      </div>
+    <% end %>
+    <% else %>
+      <p class="form-msg">こちらは管理人専用ページです。</p>
+     <% end %>
+    <%= form_for(:session, url: login_path) do |f| %>
+
+      <div class="form-item">
+      <p class="formLabel">Email</p>
+      <%= f.email_field :email, class: 'form-style form-control' %>
+      </div>
+
+      <div class="form-item">
+      <p class="formLabel">Password</p>
+      <%= f.password_field :password, class: 'form-style form-control' %>
+      </div>
+
+      <%= f.submit "Log in", class: "login pull-right" %>
+    <% end %>
+  </div>
+</div>
+
+
+<%= javascript_include_tag "common.js" %>
+<%= javascript_include_tag "sessions.js" %>

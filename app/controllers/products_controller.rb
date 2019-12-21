@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+
+  before_action :logged_in_user, only: [:new,:create,:edit,:update,:destroy]
+
   def index
     @product = Product.new
     @products = Product.all
@@ -61,5 +64,12 @@ class ProductsController < ApplicationController
   def product_params
     params.require(:product).permit(:name, :price, :description,
                                 :picture)
+  end
+
+  def logged_in_user
+    unless logged_in?
+      flash[:danger] = "投稿機能を利用する場合は、ログインしてください。"
+      redirect_to login_url
+    end
   end
 end

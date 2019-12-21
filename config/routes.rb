@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
   resources :products
 
   root 'static_pages#home'
+  get  '/home',    to: 'static_pages#home'
   get  '/charity',    to: 'static_pages#charity'
 
   get      '/login',  to: 'sessions#new'

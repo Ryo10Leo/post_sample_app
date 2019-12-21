@@ -27,6 +27,7 @@
             </div>
     </div>
 
+    <% if logged_in? %>
     <%= render 'layouts/new_btn'%>
 
     <div id="new-form">
@@ -38,6 +39,7 @@
 
     <div id="post-success-msg"></div>
     <div id="loading" display="none"><%=image_tag 'shared/loading.gif' %></div>
+    <% end %>
 
 <%= javascript_include_tag "common.js" %>
 <%= javascript_include_tag "product.js" %>
