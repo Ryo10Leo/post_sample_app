@@ -28,5 +28,8 @@ Product.create(name: "なんかすごいトリートメント",
                 description: "気になる髪になんかすごい成分配合のナンチャラが効く！",
                 picture: File.open("#{Rails.root}/test/fixtures/product5.jpg"))
 
+User.create(name: "Ryo Iwata", email: "ryo.bbl9@gmail.com",
+            password: "mimuratoeregansu", password_confirmation: "mimuratoeregansu")
+
 
 
