@@ -1,6 +1,7 @@
  $("#new-form").html("<%= escape_javascript(render('products/new_form_js')) %>");
  $("#new-form").addClass('active');
  $(document).ready(function(){
+    bodyFixed();
 
     newFormClose();
 

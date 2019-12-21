@@ -4,7 +4,8 @@ function newFormClose(){
 
         if($('#new-form').hasClass("active")){
 
-        $("#new-form").removeClass("active");
+            $("#new-form").removeClass("active");
+            bodyRemoveFixed();
 
         }
     });
@@ -16,13 +17,22 @@ function editFormClose(){
 
         if($('#edit-form').hasClass("active")){
 
-        $("#edit-form").removeClass("active");
+            $("#edit-form").removeClass("active");
 
-         }
+        }
     });
     return false;
 };
 
+function bodyFixed(){
+    scrollPosition = $(window).scrollTop();
+    $('body').addClass('fixed').css({'top': -scrollPosition});
+};
+
+function bodyRemoveFixed(){
+    $('body').removeClass('fixed').css({'top': 0});
+    window.scrollTo( 0 , scrollPosition );
+};
 
 //MODAL_WINDOW
 function modalDisplay(){
@@ -31,11 +41,13 @@ function modalDisplay(){
         $(this).on('click',function(){
             var target = $(this).data('target');
             var modal = document.getElementById(target);
+            bodyFixed();
             $(modal).fadeIn();
             return false;
         });
     });
     $('.js-modal-close').on('click',function(){
+        bodyRemoveFixed();
         $('.js-modal').fadeOut();
         return false;
     });
@@ -51,6 +63,7 @@ function loading(){
         $('#loading').fadeOut();
     });
 };
+
 
 //Form Image Field Thumb
 function formImageThumb(){
