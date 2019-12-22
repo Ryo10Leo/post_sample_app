@@ -47,6 +47,7 @@ function modalDisplay(){
     });
     $('.js-modal-close').on('click',function(){
         $('.js-modal').fadeOut();
+        bodyRemoveFixed();
         return false;
     });
 };
