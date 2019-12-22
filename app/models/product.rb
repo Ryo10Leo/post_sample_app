@@ -4,7 +4,7 @@ class Product < ApplicationRecord
     validates :name,        presence: true, length:{ maximum: 50}
     validates :price,       presence: true, length:{ maximum: 20}, format: /\A[0-9]+\z/
 
-    validates :description, presence: true, length:{ maximum: 140}
+    validates :description, presence: true, length:{ maximum: 200}
 
     validates :picture, presence: true
     mount_uploader :picture, ProductPictureUploader
