@@ -92,3 +92,21 @@ input[type="submit"].login:focus{outline: none;}
    font-size: 0.8125rem;
    margin: 20px;
 }
+
+
+.checkbox {
+
+
+   span {
+      font-size: 0.8125rem;
+      margin-left: 10px;
+      font-weight: normal;
+   }
+ }
+
+
+
+ #session_remember_me {
+   width: auto;
+   margin-left: 0;
+ }

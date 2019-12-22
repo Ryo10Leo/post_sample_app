@@ -34,7 +34,7 @@
 
       <div class="form-item">
       <p class="formLabel">Email</p>
-      <%= f.email_field :email, class: 'form-style form-control' %>
+      <%= f.email_field :email, class: 'form-style form-control',autocomplete: 'off' %>
       </div>
 
       <div class="form-item">
@@ -42,6 +42,12 @@
       <%= f.password_field :password, class: 'form-style form-control' %>
       </div>
 
+      <div class="check-wrapper">
+      <%= f.label :remember_me, class: "checkbox inline" do %>
+      <%= f.check_box :remember_me %>
+      <span>ログイン状態を保持する</span>
+      <% end %>
+      </div>
       <%= f.submit "Log in", class: "login pull-right" %>
     <% end %>
   </div>
