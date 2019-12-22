@@ -1,0 +1,7 @@
+ $("#edit-form").html("<%= escape_javascript(render('styles/edit_form_js')) %>");
+ $("#edit-form").addClass('active');
+ $(document).ready(function(){
+    editFormClose();
+
+    formImageThumb();
+});

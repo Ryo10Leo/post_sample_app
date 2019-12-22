@@ -3,34 +3,29 @@
 <div class="js-form-close"><i class="fa fa-times-circle"></i></div>
 <div id="loading" style="display:none;"><%= image_tag 'shared/loading.gif' %></div>
 <div class="wrapper">
-    <h1 class="form-title">商品新規投稿</h1>
+    <h1 class="form-title">スタイル新規投稿</h1>
 
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@product,remote: true) do|f| %>
+    <%= form_for(@style,remote: true) do|f| %>
 
     <%= render'shared/error_messages',object: f.object %>
 
     <div class="form-group">
-        <%= f.label "商品名" %>
-        <%= f.text_field :name ,class: 'form-control' %>
+        <%= f.label "タイトル" %>
+        <%= f.text_field :caption ,class: 'form-control' %>
     </div>
 
     <div class="form-group">
-        <%= f.label "定価" %>
+        <%= f.label "値段" %>
         <%= f.text_field :price ,class: 'form-control' %>
-    </div>
-
-    <div class="form-group">
-    <%= f.label "説明" %>
-    <%= f.text_area :description ,class: 'form-control' %>
     </div>
 
      <%= f.label '画像' %>
 
       <div id="img_field" onClick="$('#file').click()" >
-        <% if @product.picture.present? %>
-          <%= image_tag(@product.picture) %>
+        <% if @style.picture.present? %>
+          <%= image_tag(@style.picture) %>
         <% else %>
           <i class="fa fa-image"></i>
         <% end %>

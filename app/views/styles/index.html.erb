@@ -1,0 +1,47 @@
+<% provide(:title, 'Style') %>
+<% provide(:new, new_style_path) %>
+<%= stylesheet_link_tag 'common.css' %>
+<%= stylesheet_link_tag 'styles.css' %>
+<%= stylesheet_link_tag 'form_sample.css' %>
+
+    <div class="p-header">
+        <div id="product">
+                <%= render 'layouts/header_p'%>
+        </div>
+    </div><!--p-header-->
+    <div class="m-header-nav">
+        <%= render 'layouts/header_m'%>
+        <%= render 'layouts/header_nav_m'%>
+    </div>
+
+    <h2 class="page-title"><span>-</span> Style <span>-</span></h2>
+
+    <div class="wrapper">
+
+    <%= image_tag 'style/top_image.JPG' ,class: 'top-image' %>
+    </div>
+
+    <div class="style-contents">
+        <div class="grid">
+            <%= render @styles %>
+        </div>
+    </div>
+
+    <% if logged_in? %>
+    <%= render 'layouts/new_btn'%>
+
+    <div id="new-form">
+    <%= render 'styles/new_form_js' %>
+    </div>
+    <div id="edit-form">
+    <%= render 'styles/edit_form_js' %>
+    </div>
+
+    <div id="post-success-msg"></div>
+    <div id="loading" display="none"><%=image_tag 'shared/loading.gif' %></div>
+    <% end %>
+
+
+
+<%= javascript_include_tag "common.js" %>
+<%= javascript_include_tag "style.js" %>

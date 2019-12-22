@@ -28,7 +28,31 @@ Product.create(name: "なんかすごいトリートメント",
                 description: "気になる髪になんかすごい成分配合のナンチャラが効く！",
                 picture: File.open("#{Rails.root}/test/fixtures/product5.jpg"))
 
-User.create(name: "Ryo Iwata", email: "ryo.bbl9@gmail.com",
+  Style.create(caption: "カット&カラー",
+                price: "5000",
+                picture: File.open("#{Rails.root}/test/fixtures/model_sample1.jpg"))
+
+  Style.create(caption: "カット&カラー",
+                price: "5000",
+                picture: File.open("#{Rails.root}/test/fixtures/model_sample2.jpg"))
+
+  Style.create(caption: "カット&カラー",
+                price: "5000",
+                picture: File.open("#{Rails.root}/test/fixtures/model_sample3.jpg"))
+
+  Style.create(caption: "カット&カラー",
+                price: "5000",
+                picture: File.open("#{Rails.root}/test/fixtures/model_sample4.jpg"))
+
+  Style.create(caption: "カット&カラー",
+                price: "5000",
+                picture: File.open("#{Rails.root}/test/fixtures/model_sample5.jpg"))
+
+  Style.create(caption: "カット&カラー",
+                price: "5000",
+                picture: File.open("#{Rails.root}/test/fixtures/model_sample6.jpg"))
+
+   User.create(name: "Ryo Iwata", email: "ryo.bbl9@gmail.com",
             password: "mimuratoeregansu", password_confirmation: "mimuratoeregansu")
 
 

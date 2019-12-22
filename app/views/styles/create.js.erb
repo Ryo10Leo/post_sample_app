@@ -1,0 +1,11 @@
+$(".grid").html("<%= escape_javascript(render(@styles)) %>");
+$("#new-form").removeClass("active");
+$(document).ready(function(){
+    bodyRemoveFixed();
+    modalDisplay();
+});
+
+    var msg = "投稿が完了しました"
+    postSuccessMsg(msg);
+    postBtnUp();
+

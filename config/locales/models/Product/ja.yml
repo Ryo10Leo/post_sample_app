@@ -1,0 +1,14 @@
+
+ja:
+  activerecord:
+    models:
+      product: 商品
+    attributes:
+      product:
+        id: ID
+        created_at: 登録日時
+        updated_at: 更新日時
+        name: 商品名
+        price: 定価
+        description: 説明
+        picture: 画像

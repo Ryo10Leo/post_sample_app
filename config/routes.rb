@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
+  get 'styles/index'
+
   get 'sessions/new'
 
   resources :products
+
+  resources :styles
 
   root 'static_pages#home'
   get  '/home',    to: 'static_pages#home'

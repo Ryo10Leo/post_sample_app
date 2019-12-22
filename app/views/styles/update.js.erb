@@ -1,0 +1,9 @@
+$(".grid").html("<%= escape_javascript(render(@styles)) %>");
+$("#edit-form").removeClass("active");
+$(document).ready(function(){
+    bodyRemoveFixed();
+    modalDisplay();
+});
+    var msg = "編集を保存しました"
+    postSuccessMsg(msg);
+    postBtnUp();

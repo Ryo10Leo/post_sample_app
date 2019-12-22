@@ -1,0 +1,16 @@
+<div class="item">
+    <a class="js-modal-open" data-target="modal-<%= style.id %>">
+    <%= image_tag style.picture %>
+    </a>
+</div>
+
+<div id="modal-<%= style.id %>" class="modal js-modal">
+    <div class="modal-bg js-modal-close"></div>
+    <div class="modal-content">
+        <div class="close-btn js-modal-close"><i class="fa fa-times-circle"></i></div>
+        <%= image_tag style.picture %>
+        <h1><%= style.caption %><h1>
+        <p class="price">¥<%= style.price %></p>
+        <%= render 'styles/edit_icons', object: style %>
+    </div>
+</div>
