@@ -1,0 +1,7 @@
+ $("#new-form").html("<%= escape_javascript(render('articles/new_form_js')) %>");
+ $("#new-form").addClass('active');
+ $(document).ready(function(){
+    newFormClose();
+
+    <%#formImageThumb();%>
+});

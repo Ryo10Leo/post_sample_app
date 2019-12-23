@@ -1,0 +1,16 @@
+<article>
+    <header class="post-info">
+        <h2 class="post-title"><%= article.title %></h2>
+        <p class="post-date"><%= l article.created_at %></p>
+    </header>
+    <%#<%= image_tag(article.picture) %>
+    <div class="post-content"><%== article.content %></div>
+    <div class="post-cat">
+        <p>カテゴリー</p>
+        <ul class="list">
+            <li>news</li>
+            <li>お知らせ</li>
+        </ul>
+    </div>
+    <%= render 'articles/show_icon', object: article %>
+</article>

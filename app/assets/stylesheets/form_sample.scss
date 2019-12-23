@@ -202,6 +202,11 @@ form{
     height: 80px;
 }
 
+.cke_editable img{
+    width: 100px !important;
+    height: auto !important;
+}
+
 @media screen and (max-width: 559px){
 
     form{
@@ -215,6 +220,10 @@ form{
     #new-form,#edit-form{
         padding: 20px;
 
+    }
+
+    .cke_editable img{
+        width: 90px !important;
     }
 }
 

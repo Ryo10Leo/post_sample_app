@@ -1,0 +1,10 @@
+$(".articles").html("<%= escape_javascript(render(@articles)) %>");
+$("#new-form").removeClass("active");
+$(document).ready(function(){
+
+});
+
+    var msg = "投稿が完了しました"
+    postSuccessMsg(msg);
+    postBtnUp();
+

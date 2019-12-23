@@ -1,0 +1,240 @@
+/* NEWS */
+
+#news{
+    margin-bottom: 40px;
+}
+
+.top-image{
+    object-fit: cover;
+    width: 100%;
+    height:350px;
+    margin-bottom: 80px;
+}
+.page-title{
+    padding-top:35px;
+    padding-bottom: 35px;
+    font-size: 3.125rem;
+    margin-bottom: 60px;
+}
+.news-contents{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.articles{
+    flex-basis: 65%;
+}
+article{
+    margin-bottom: 85px;
+}
+.post-info .post-title{
+    font-weight: normal;
+    font-family:"Yu Mincho", "YuMincho";
+}
+.post-info{
+    position: relative;
+    border-bottom: solid 2px #33691e;
+    padding-top: 4px;
+    margin-bottom: 40px;
+}
+.post-date{
+    position: absolute;
+    top: 0;
+    left: 80%;
+    right: 0;
+    bottom: 0;
+    padding-top: 10px;
+}
+.articles .post-image img{
+    object-fit: cover;
+    width: 100% ;
+    height: 400px;
+    margin-bottom: 35px;
+}
+.post-content{
+    font-family:"Yu Mincho", "YuMincho";
+    padding-bottom: 20px;
+    border-bottom: solid 2px #33691e;
+}
+
+.post-content img{
+    object-fit: cover;
+    width: 70% !important;
+    height: auto !important;
+}
+.post-cat{
+    display: flex;
+    align-items: center;
+    border-bottom: solid 2px #d7ccc8;
+}
+.post-cat p{
+    margin: 15px;
+    padding-right: 15px;
+    border-right:solid 1px #d7ccc8 ;
+}
+.post-cat ul{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    list-style: none;
+}
+.post-cat li{
+    padding: 10px;
+}
+
+aside{
+    flex-basis: 24%;
+}
+aside ul {
+    padding-left: 8%;
+    margin-bottom: 50px;
+}
+aside li {
+    margin-bottom: 10px;
+}
+aside li a{
+    color: #3e2723;
+}
+.sub-title{
+    font-weight: normal;
+    border-bottom: solid 2px #33691e;
+    padding-bottom: 5px;
+    margin-bottom: 35px;
+}
+
+.show-icon,
+.edit-icons{
+    margin-top:8px;
+}
+
+.show-icon i,
+.edit-icons i{
+    margin-left:15px ;
+    font-size:1.825rem ;
+    color: #CCCCCC;
+    transition: .08s ease;
+}
+
+.show-icon i:active,
+.edit-icons i:active{
+    transform: scale(0.8,0.8);
+}
+
+#post-success-msg{
+    z-index: 998;
+    background-color:#1DA1F2;
+    color: white;
+    position: fixed;
+    bottom: -8%;
+    left: 2%;
+    text-align: center;
+    width: 40%;
+    padding: 8px;
+    border-radius: 20px;
+    transition: all .5s ease;
+}
+#post-success-msg.active{
+    bottom: 1%;
+}
+
+.editor{
+    margin-bottom:40px ;
+}
+
+@media screen and (max-width: 959px){
+
+    .top-image{
+
+        height:300px;
+    }
+
+    .articles .post-image img{
+
+        height: 350px;
+    }
+
+    .edit-icons {
+        bottom: -8%;
+    }
+
+    .show-icon {
+        bottom: -8%;
+    }
+}
+
+@media screen and (max-width: 559px) {
+
+    .page-title{
+        font-size: 2.25rem;
+        margin-top: 80px;
+        margin-bottom: 40px;
+    }
+    .news-contents{
+        flex-direction: column;
+    }
+    .post-info .post-title {
+        font-size: 1.125rem;
+    }
+    .post-date{
+        top: 30px;
+        left: 0%;
+        font-size: 0.875rem;
+    }
+    .articles .post-image img{
+        height: 250px;
+    }
+    .post-content{
+        font-size: 0.875rem;
+    }
+
+    .post-cat{
+        display: flex;
+        align-items: center;
+        border-bottom: solid 2px #d7ccc8;
+    }
+    .post-cat p{
+        font-size: 0.875rem;
+        margin: 10px;
+        padding-right: 15px;
+        border-right:solid 1px #d7ccc8 ;
+    }
+    .post-cat ul{
+        font-size: 0.875rem;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .post-cat li{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .top-image{
+
+        height:250px;
+    }
+
+    .edit-icons {
+        bottom: -10%;
+    }
+
+    .show-icon {
+        bottom: -10%;
+    }
+
+    #post-success-msg{
+        background-color:#1DA1F2;
+        color: white;
+        position: fixed;
+        bottom: -8%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 90%;
+        padding: 8px;
+        border-radius: 20px;
+        transition: all .5s ease;
+    }
+
+    #post-success-msg.active{
+        bottom: 1%;
+    }
+}

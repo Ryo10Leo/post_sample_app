@@ -1,0 +1,14 @@
+<% if logged_in? %>
+<div class="edit-icons">
+    <%= link_to edit_article_path(object),remote: true do%>
+    <i class="fa fa-edit"></i>
+    <% end %>
+    <%= link_to object, method: :delete, data:{confirm:"こちらの投稿を削除しますか？"} do %>
+    <i class="fa fa-trash"></i>
+    <% end %>
+    <%= link_to articles_path do %>
+    <i class="fa fa-list-ul"></i>
+    <% end %>
+</div>
+<% end %>
+

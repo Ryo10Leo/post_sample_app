@@ -1,0 +1,64 @@
+<% provide(:title, 'News') %>
+<% provide(:new, new_article_path) %>
+<%= stylesheet_link_tag 'common.css' %>
+<%= stylesheet_link_tag 'articles.css' %>
+<%= stylesheet_link_tag 'form_sample.css' %>
+
+    <div class="p-header">
+        <div id="news">
+                <%= render 'layouts/header_p'%>
+        </div>
+    </div><!--p-header-->
+    <div class="m-header-nav">
+        <%= render 'layouts/header_m'%>
+        <%= render 'layouts/header_nav_m'%>
+    </div>
+
+    <h2 class="page-title"><span>-</span> News <span>-</span></h2>
+
+    <div class="wrapper">
+        <%= image_tag 'article/top_image.JPG' ,class: 'top-image' %>
+    </div>
+
+    <div class="news-contents wrapper">
+        <div class="articles">
+            <% if @articles %>
+            <%= render @articles %>
+            <% end %>
+        </div>
+
+        <aside>
+            <h3 class="sub-title">Recent Entry</h3>
+            <ul class="sub-menu">
+                <li><a href="#">価格変更のお知らせ</a></li>
+                <li><a href="#">学割キャンペーン実施中</a></li>
+                <li><a href="#">台風に伴う臨時休業のお知らせ</a></li>
+                <li><a href="#">新しいシャンプー入荷しました</a></li>
+                <li><a href="#">髪の豆知識</a></li>
+            </ul>
+            <h3 class="sub-title">Category</h3>
+            <ul class="sub-menu">
+                    <li><a href="#">お知らせ</a></li>
+                    <li><a href="#">ratio.news</a></li>
+                    <li><a href="#">ブログ</a></li>
+                    <li><a href="#">商品</a></li>
+        　　　</ul>
+        </aside>
+    </div>
+
+    <% if logged_in? %>
+    <%= render 'layouts/new_btn'%>
+
+    <div id="new-form">
+    <%= render 'articles/new_form_js' %>
+    </div>
+
+    <div id="post-success-msg"></div>
+    <div id="loading" display="none"><%=image_tag 'shared/loading.gif' %></div>
+    <% end %>
+
+<%= javascript_include_tag "common.js" %>
+<%= javascript_include_tag "article.js" %>
+
+<%= javascript_include_tag Ckeditor.cdn_url %>
+

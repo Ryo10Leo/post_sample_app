@@ -1,0 +1,28 @@
+<% provide(:button_text, '編集を保存') %>
+
+<div class="js-form-close"><i class="fa fa-times-circle"></i></div>
+<div id="loading" style="display:none;"><%= image_tag 'shared/loading.gif' %></div>
+<div class="wrapper">
+    <h1 class="form-title">記事編集</h1>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@article,remote: true) do|f| %>
+
+    <%= render'shared/error_messages',object: f.object %>
+
+    <div class="form-group">
+        <%= f.label "タイトル" %>
+        <%= f.text_field :title ,class: 'form-control' %>
+    </div>
+
+    <div class="form-group editor">
+        <%= f.label "内容" %>
+        <%= f.cktext_area :content ,class: 'form-control' %>
+    </div>
+
+    <%= f.submit yield(:button_text), class: "submit-btn" %>
+    <% end %>
+    </div>
+    </div>
+</div>

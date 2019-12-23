@@ -1,0 +1,8 @@
+$(".articles").html("<%= escape_javascript(render('articles/article_show')) %>");
+$("#edit-form").removeClass("active");
+$(document).ready(function(){
+
+});
+    var msg = "編集を保存しました"
+    postSuccessMsg(msg);
+    postBtnUp();
