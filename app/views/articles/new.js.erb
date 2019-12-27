@@ -2,6 +2,8 @@
  $("#new-form").addClass('active');
  $(document).ready(function(){
     newFormClose();
-
-    <%#formImageThumb();%>
+    $('#article-tags').tagit({
+        fieldName: 'category_list',
+        singleField: true
+    });
 });

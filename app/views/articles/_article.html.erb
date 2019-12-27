@@ -7,10 +7,15 @@
     <div class="post-content"><%== article.content %></div>
     <div class="post-cat">
         <p>カテゴリー</p>
-        <ul class="list">
-            <li>news</li>
-            <li>お知らせ</li>
+        <% unless article.categories.blank? %>
+        <ul>
+        <% article.categories.each do |category| %>
+        <li>
+            <%= link_to category.name,articles_path(category_id:category.id) %>
+        </li>
+        <% end %>
         </ul>
+<% end %>
     </div>
     <%= render 'articles/show_icon', object: article %>
 </article>

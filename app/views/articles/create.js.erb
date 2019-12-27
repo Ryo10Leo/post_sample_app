@@ -1,4 +1,5 @@
 $(".articles").html("<%= escape_javascript(render(@articles)) %>");
+$(".category").html("<%= escape_javascript(render('articles/category')) %>");
 $("#new-form").removeClass("active");
 $(document).ready(function(){
 

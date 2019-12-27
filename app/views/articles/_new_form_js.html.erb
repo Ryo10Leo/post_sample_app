@@ -21,6 +21,12 @@
         <%= f.cktext_area :content ,class: 'form-control editor1' %>
     </div>
 
+    <div class="article-tags-field">
+      <%= f.label "カテゴリー" %>
+      <ul id="article-tags">
+      </ul>
+    </div>
+
     <%= f.submit yield(:button_text), class: "submit-btn" %>
     <% end %>
     </div>

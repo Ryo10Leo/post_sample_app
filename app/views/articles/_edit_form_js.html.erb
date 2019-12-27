@@ -21,6 +21,13 @@
         <%= f.cktext_area :content ,class: 'form-control' %>
     </div>
 
+    <div class="article-tags-field">
+    <%= f.label "カテゴリ" %>
+    <ul id="article-tags">
+    </ul>
+    <%= hidden_field_tag :category_hidden,@category_list %>
+    </div>
+
     <%= f.submit yield(:button_text), class: "submit-btn" %>
     <% end %>
     </div>

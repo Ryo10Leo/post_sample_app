@@ -13,4 +13,6 @@
 //= require jquery
 //= require rails-ujs
 //= require jquery.waypoints
+//= require jquery-ui
+//= require tag-it
 
