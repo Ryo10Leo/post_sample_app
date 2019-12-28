@@ -1,4 +1,5 @@
 $(".articles").html("<%= escape_javascript(render('articles/article_show')) %>");
+$(".recent-entry").html("<%= escape_javascript(render('articles/recent_entry'))%>");
 $(".category").html("<%= escape_javascript(render('articles/category'))%>");
 $("#edit-form").removeClass("active");
 $(document).ready(function(){

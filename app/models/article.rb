@@ -1,6 +1,7 @@
 class Article < ApplicationRecord
     default_scope -> { order(created_at: :desc) }
     scope :from_category, -> (category_id)  { where(id: article_ids = ArticleCategory.where(category_id: category_id).select(:article_id))}
+    scope  :recent_article, -> { limit(5) }
     validates :title,       presence: true, length:{ maximum: 50}
     validates :content,     presence: true
 

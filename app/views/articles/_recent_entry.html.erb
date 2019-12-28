@@ -1,0 +1,9 @@
+<% unless @recent_entries.blank? %>
+<ul class="sub-menu">
+    <% @recent_entries.each do |article| %>
+    <li>
+        <%= link_to article.title,article_path(article) %>
+    </li>
+    <% end %>
+</ul>
+<% end %>

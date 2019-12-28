@@ -67,8 +67,9 @@ article{
     display: flex;
     align-items: center;
     border-bottom: solid 2px #d7ccc8;
+    height: auto;
 }
-.post-cat p{
+.post-cat .text{
     margin: 15px;
     padding-right: 15px;
     border-right:solid 1px #d7ccc8 ;
@@ -79,8 +80,20 @@ article{
     display: flex;
     list-style: none;
 }
-.post-cat li{
-    padding: 10px;
+
+.post-cat li {
+    padding: 10px 0px 10px 8px;
+}
+
+.post-cat li a{
+    color: #3e2723;
+}
+.post-cat li a:hover{
+    cursor: pointer;
+    border-bottom: #3e2723 solid 1px;
+}
+.comma{
+    padding:10px 0;
 }
 
 aside{
@@ -95,6 +108,9 @@ aside li {
 }
 aside li a{
     color: #3e2723;
+}
+aside li a:hover{
+    border-bottom: solid 1px;
 }
 .sub-title{
     font-weight: normal;
@@ -242,20 +258,21 @@ li.next_page a{
         align-items: center;
         border-bottom: solid 2px #d7ccc8;
     }
-    .post-cat p{
-        font-size: 0.875rem;
-        margin: 10px;
-        padding-right: 15px;
+    .post-cat .text{
+        width: 25%;
+        font-size: 10px;
+        margin: 10px 0px 10px 5px;
+        padding-right: 5px;
         border-right:solid 1px #d7ccc8 ;
     }
     .post-cat ul{
-        font-size: 0.875rem;
+        width:100%;
+        font-size: 12px;
         margin-top: 5px;
         margin-bottom: 5px;
     }
-    .post-cat li{
-        padding-top: 10px;
-        padding-bottom: 10px;
+    .post-cat li {
+        padding: 10px 0px 10px 5px;
     }
     .top-image{
 

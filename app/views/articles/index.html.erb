@@ -30,13 +30,9 @@
 
         <aside>
             <h3 class="sub-title">Recent Entry</h3>
-            <ul class="sub-menu">
-                <li><a href="#">価格変更のお知らせ</a></li>
-                <li><a href="#">学割キャンペーン実施中</a></li>
-                <li><a href="#">台風に伴う臨時休業のお知らせ</a></li>
-                <li><a href="#">新しいシャンプー入荷しました</a></li>
-                <li><a href="#">髪の豆知識</a></li>
-            </ul>
+            <div class="recent-entry">
+                <%= render 'articles/recent_entry' %>
+            </div>
             <h3 class="sub-title">Category</h3>
             <div class="category">
                 <%= render 'articles/category' %>

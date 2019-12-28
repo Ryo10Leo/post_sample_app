@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
 
   def index
     @article = Article.new
+    @recent_entries = Article.recent_article
     @categories = Category.all
     if params[:category_id]
       @selected_category = Category.find(params[:category_id])
@@ -22,7 +23,8 @@ class ArticlesController < ApplicationController
     category_list = params[:category_list].split(",")
     if @article.save
       @article.save_categories(category_list)
-      @articles = Article.all
+      @articles= Article.all.paginate(page: params[:page], per_page: 2)
+      @recent_entries = Article.recent_article
       @categories = Category.all
       respond_to do |format|
         format.js
@@ -35,6 +37,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @recent_entries = Article.recent_article
     @categories = Category.all
   end
 
@@ -53,6 +56,7 @@ class ArticlesController < ApplicationController
     if @article.update_attributes(article_params)
       @article.save_categories(category_list)
       remove_not_used_cat
+      @recent_entries = Article.recent_article
       @categories = Category.all
       respond_to do |format|
         @articles = Article.all

@@ -1,0 +1,14 @@
+<div class="text">カテゴリー</div>
+<% unless object.categories.blank? %>
+<ul>
+<% object.categories.each_with_index do |category, i| %>
+<li>
+    <%= link_to category.name,articles_path(category_id:category.id) %>
+</li>
+<% if i == object.categories.length - 1 %>
+<% break %>
+<% end %>
+<div class="comma">,</div>
+<% end %>
+</ul>
+<% end %>

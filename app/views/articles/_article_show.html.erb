@@ -5,16 +5,7 @@
     </header>
     <div class="post-content"><%== @article.content %></div>
     <div class="post-cat">
-        <p>カテゴリー</p>
-        <% unless @article.categories.blank? %>
-        <ul>
-            <% @article.categories.each do |category| %>
-            <li>
-                <%= link_to category.name,articles_path(category_id:category.id) %>
-            </li>
-        <% end %>
-        </ul>
-            <% end %>
+        <%= render 'articles/article_category', object: @article%>
     </div>
     <%= render 'articles/edit_icons', object: @article %>
 </article>
