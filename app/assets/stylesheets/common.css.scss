@@ -751,6 +751,20 @@ iframe{
 }
 .text-box{
 flex-basis: 50%;
+position: relative;
+}
+.paypay{
+    margin-left: 15%;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+}
+.paypay img{
+    width: 20px;
+    height: 20px;
+}
+.paypay span{
+    font-size: 0.8125rem;
 }
 #map{
 flex-basis: 45%;
@@ -786,8 +800,58 @@ position: relative;
 #for-mobile-map-btn{
     display:none;
 }
-
-
+#calendar-mobile{
+    display: none;
+}
+.calender-wrapper{
+    margin: 0% 4%;
+    margin-top: 15px;
+}
+.tabs{
+    width:45%;
+}
+#calendar{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 4%;
+}
+.fc-state-default {
+    text-shadow: 0 0px 0px !important;
+    box-shadow: 0 0px 0 !important;
+}
+.fc-icon {
+    font-family: "YuGothic","Yu Gothic Medium","游ゴシック Medium","游ゴシック体","ヒラギノ角ゴ pro W3",sans-serif;
+}
+.fc .fc-button-group > :first-child {
+    margin-right: 5px;
+}
+.fc-prev-button,
+.fc-next-button{
+    color: white !important;
+    background: #33691e !important;
+}
+.fc-today-button {
+    color: #FFF;
+    background: #5e4037;
+}
+.fc-state-default.fc-corner-left {
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+.fc-state-default.fc-corner-right {
+    border-top-right-radius:  0px !important;
+    border-bottom-right-radius:  0px !important;
+}
+.fc-unthemed th{
+    color: #FFF;
+    background: #33691e;
+}
+.calender-text{
+    position: absolute;
+    bottom: -2%;
+    font-size: 0.8125rem;
+}
 /* HOME-CHARITY */
 
 #home-charity{
@@ -1025,6 +1089,13 @@ footer span{
     .donation-pic{
         width: 270px;
         height:100px;
+    }
+    #calendar {
+        padding: 0%;
+        padding-bottom: 2%;
+    }
+    .tabs{
+        width:48%;
     }
 }
 
@@ -1433,8 +1504,22 @@ footer span{
         color: #ffffff;
         line-height: 38px;
     }
+    .calender-wrapper{
+        display:none ;
+    }
 
+    #calendar-mobile{
+        margin-top: 50px;
+        position: relative;
+        padding: 1%;
+        display: block;
+    }
 
+    .calender-text {
+        position: absolute;
+        bottom: -12%;
+        font-size: 11px;
+    }
     /* HOME-CHARITY */
 
     #home-charity{

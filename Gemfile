@@ -19,6 +19,8 @@ gem 'rails-i18n'
 gem 'ckeditor'
 gem 'tag-it-rails'
 gem 'jquery-ui-rails'
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

@@ -15,4 +15,60 @@
 //= require jquery.waypoints
 //= require jquery-ui
 //= require tag-it
+//= require moment
+//= require fullcalendar
 
+
+$(function () {
+    var m = moment();
+    $(document).ready(function(){
+        var cals = $('#calendar .tabs');
+        cals.each(function(){
+            $(this).fullCalendar({
+                defaultDate: m,
+                header: {left:'',center:'title',right:''},
+                googleCalendarApiKey:'AIzaSyBiyLCIK9UChMn7_8BvlrF8PrZSooSPy-A',
+                contentHeight: 350,
+                firstDay: 1,
+                timeFormat: 'H:mm',
+                eventSources: [
+                    {
+                        googleCalendarId: 'ckioggav4lai220ebdgjv2r6g0@group.calendar.google.com'
+                    },
+                    {
+                        googleCalendarId: 'rmd87t10bvnh7bvqdpfshk4uj4@group.calendar.google.com',
+                        rendering: 'background',
+                        color:     '#5e4037'
+                    }
+                ]
+            });
+            m = m.add(1, 'month');
+        });
+    });
+});
+
+$(function () {
+$(document).ready(function(){
+            $('#calendar-mobile').fullCalendar({
+                googleCalendarApiKey:'AIzaSyBiyLCIK9UChMn7_8BvlrF8PrZSooSPy-A',
+                contentHeight: 250,
+                buttonText: {
+                    prev: '<',
+                    next: '>'
+                },
+                firstDay: 1,
+                timeFormat: 'H:mm',
+                eventSources: [
+                {
+                    googleCalendarId: 'ckioggav4lai220ebdgjv2r6g0@group.calendar.google.com'
+                },
+                {
+                    googleCalendarId: 'rmd87t10bvnh7bvqdpfshk4uj4@group.calendar.google.com',
+                    rendering: 'background',
+                    color:     '#5e4037'
+                }
+                ]
+
+            });
+        });
+});

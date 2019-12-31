@@ -1,30 +1,36 @@
 <div id="top-news-container">
-            <div class="wrapper">
+   <div class="wrapper">
             <h2 class="page-title effect-fade-down"><span>-</span> News <span>-</span></h2>
-            </div><!--/.wrapper-->
-            <article id="top-posts">
-            <div class="news-1">
-                <a href="#"><%= image_tag 'home/news_thumb1.jpg'%></a>
-                <p class="news-date">2019.11.14</p>
-                <h1>価格変更のお知らせ</h1>
-                <p class="news-text">
-                みなさんいかがお過ごしですか。レシオ美容室はこの度消費増税により...
-                </p>
-                <div class="top-news-btn"><a href="#">Read More</a></div>
+    </div><!--/.wrapper-->
+    <article id="top-posts">
+    <% @top_news.each.with_index(1) do |article, index| %>
+            <div class="news-<%= index %>">
+                <%= link_to article_path(article) do %>
+                    <%== article_thumb(article.content) %>
+                <% end %>
+                <p class="news-date"><%= l article.created_at %></p>
+                <h1><%= article.title %></h1>
+                <p class="news-text"><%= article_content(article) %></p>
+                <div class="top-news-btn"><%= link_to 'Read More', article_path(article) %></div>
             </div>
-            <div class="news-2">
-                    <a href="#"><%= image_tag 'home/news_thumb2.jpg'%></a>
-                <p class="news-date">2019.10.09</p>
-                <h1>学割キャンペーン実施中</h1>
-                <p></p>
-                <div class="top-news-btn"><a href="#">Read More</a></div>
-            </div>
-            <div class="news-3">
-                    <a href="#"><%= image_tag 'home/news_thumb3.jpg'%></a>
-                <p class="news-date">2019.10.02</p>
-                <h1>台風に伴う臨時休業のお知らせ</h1>
-                <p></p>
-                <div class="top-news-btn"><a href="#">Read More</a></div>
-            </div>
-            </article><!--top-posts-->
+    <% end %>
+    </article><!--top-posts-->
 </div><!--top-news-container-->
+
+
+<% if false %>
+<div class="news-2">
+        <a href="#"><%== article_thumb(@article2.content) %></a>
+    <p class="news-date">2019.10.09</p>
+    <h1>学割キャンペーン実施中</h1>
+    <p></p>
+    <div class="top-news-btn"><a href="#">Read More</a></div>
+</div>
+<div class="news-3">
+        <a href="#"><%== article_thumb(@article3.content) %></a>
+    <p class="news-date">2019.10.02</p>
+    <h1>台風に伴う臨時休業のお知らせ</h1>
+    <p></p>
+    <div class="top-news-btn"><a href="#">Read More</a></div>
+</div>
+<% end %>

@@ -14,4 +14,5 @@
  *= require_self
  *= require jquery-ui
  *= require jquery.tagit.css
+ *= require fullcalendar
  */
