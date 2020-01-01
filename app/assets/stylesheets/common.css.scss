@@ -856,6 +856,18 @@ position: relative;
     bottom: -2%;
     font-size: 0.8125rem;
 }
+.calender-text .brown {
+    padding: 2px 8px;
+    background: #3e2723;
+    opacity: .3;
+    border-radius: 2px;
+}
+.calender-text .blue {
+    padding: 2px 8px;
+    background: #3a87ad;
+    opacity: .3;
+    border-radius: 2px;
+}
 
 /* HOME-CHARITY */
 
@@ -936,7 +948,7 @@ footer p{
     margin-top: 0px;
 }
 footer span{
-    font-family:"Yu Mincho", "YuMincho";
+    // font-family:"Yu Mincho", "YuMincho";
     font-size: 0.8125rem;
 }
 .line-btn {
@@ -991,6 +1003,9 @@ footer span{
     .logo {
         width: 150px;
         margin-top: 25px;
+    }
+    .main-nav li {
+        margin-left: 28px;
     }
 
     /* HOME-TOP-NEWS */

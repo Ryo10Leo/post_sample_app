@@ -1,3 +1,4 @@
+<% if  @top_news %>
 <div id="top-news-container">
    <div class="wrapper">
             <h2 class="page-title effect-fade-down"><span>-</span> News <span>-</span></h2>
@@ -16,21 +17,4 @@
     <% end %>
     </article><!--top-posts-->
 </div><!--top-news-container-->
-
-
-<% if false %>
-<div class="news-2">
-        <a href="#"><%== article_thumb(@article2.content) %></a>
-    <p class="news-date">2019.10.09</p>
-    <h1>学割キャンペーン実施中</h1>
-    <p></p>
-    <div class="top-news-btn"><a href="#">Read More</a></div>
-</div>
-<div class="news-3">
-        <a href="#"><%== article_thumb(@article3.content) %></a>
-    <p class="news-date">2019.10.02</p>
-    <h1>台風に伴う臨時休業のお知らせ</h1>
-    <p></p>
-    <div class="top-news-btn"><a href="#">Read More</a></div>
-</div>
 <% end %>

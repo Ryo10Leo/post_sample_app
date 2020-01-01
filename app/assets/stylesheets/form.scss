@@ -1,28 +1,84 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
 
-@mixin box_sizing {
+//Form
+#new-form,#edit-form{
+    position: fixed;
+    top: 108%;
+    left: 0%;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1000;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #ffffff;
+    transition: all .5s ease;
+}
+
+#new-form.active,
+#edit-form.active{
+    top: 0%;
+}
+
+.js-form-close .fa{
+
+    font-size: 30px;
+
+}
+
+#new-form .js-form-close,
+#edit-form .js-form-close{
+    color: brown;
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    transition: .08s ease;
+}
+
+#new-form .js-form-close:hover,
+#edit-form .js-form-close:hover{
+    opacity: 0.8;
+}
+#new-form .js-form-close:active,
+#edit-form .js-form-close:active{
+    transform: scale(0.8,0.8);
+}
+
+input[type="text"],
+textarea, select, .uneditable-input {
+    padding: 5px 5px;
+    outline: none;
+    border: 1px solid #DDD;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 16px;
     -moz-box-sizing:    border-box;
     -webkit-box-sizing: border-box;
     box-sizing:         border-box;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+input {
+    height: auto !important;
   }
 
-
-// forms
-
-.page-header {
-    border-bottom: none;
+textarea.form-control {
+    height: 100px;
+    resize: vertical;
 }
 
-h1 {
-    margin-top:0px ;
-    margin-bottom:0px ;
+input[type="text"]:focus,
+textarea:focus {
+    color:black !important;
+    box-shadow: 0 0 7px #3498db;
+    border: 1px solid #3498db;
 }
-
 
 .form-title {
+    font-weight: normal;
     font-size: 2em;
-    margin-top: 80px;
+    margin-top: 50px;
     margin-bottom: 30px;
     padding-top:30px ;
     padding-bottom:30px ;
@@ -30,44 +86,144 @@ h1 {
 }
 
 form{
+    display: flex;
+    flex-direction:column ;
+    margin:0 20% ;
     margin-bottom: 80px;
 }
 
-input, textarea, select, .uneditable-input {
-    border: 1px solid #bbb;
+#img_field {
+    margin-bottom: 20px;
+    border: solid 1px #3498db;
+    color: #666;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 350px;
+    height: 250px;
+    background-color: #fff;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: 0.3s ease-out;
+}
+
+#img_field i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 100px;
+    color: #aaa;
+    line-height: 250px;
+    transition: 0.3s ease-out;
+}
+
+#img_field:hover {
+    background-color: #3498db;
+    transition: 0.3s ease-out;
+    opacity: 0.9;
+}
+
+#img_field:hover i {
+    transition: 0.3s ease-out;
+    display: block;
+    color: #fff;
+}
+.preview{
+    object-fit: cover;
+    height: 250px;
+}
+.form-preview img{
     width: 100%;
-    margin-bottom: 15px;
-    @include box_sizing;
+    object-fit: cover;
+    height: 250px;
+}
+.submit-btn{
+    display:block;
+    width: 250px;
+    height:70px;
+    line-height: 45px;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    background-color: #3498db; /*ボタン色*/
+    border-radius: 5px; /*角丸*/
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
-textarea.form-control {
-    height: 100px;
-    resize: vertical;
+.submit-btn:hover{
+    background-color: #196090; /*ボタン色*/
 }
 
-
-input {
-    height: auto !important;
-  }
-
+//Alert
 #error_explanation {
     color: red;
     ul {
+      list-style-position: inside;
       color: red;
       margin: 0 0 30px 0;
     }
-  }
+}
 
 .field_with_errors {
-@extend .has-error;
-.form-control {
-    color: $state-danger-text;
+    .form-control {
+        border-color: #ebccd1;
+    }
 }
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+#loading{
+    display: none;
+    background-color: rgba(0,0,0,0.8);
+    height: 100vh;
+    position:fixed ;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+}
+#loading img{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: (-50%,-50%);
+    width: 80px;
+    height: 80px;
+}
+
+.cke_editable img{
+    width: 100px !important;
+    height: auto !important;
 }
 
 @media screen and (max-width: 559px){
-    .logo {
 
-        margin-top: 0px;
+    form{
+        margin:0 0 ;
+        margin-bottom: 80px;
+
+    }
+    #img_field {
+        width: 250px;
+    }
+    #new-form,#edit-form{
+        padding: 20px;
+
+    }
+
+    .cke_editable img{
+        width: 90px !important;
     }
 }
+

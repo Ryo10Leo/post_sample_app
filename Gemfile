@@ -21,6 +21,8 @@ gem 'tag-it-rails'
 gem 'jquery-ui-rails'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+gem 'dotenv-rails'
+gem 'gon'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

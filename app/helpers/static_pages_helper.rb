@@ -13,4 +13,10 @@ module StaticPagesHelper
     def article_content(article)
         truncate(strip_tags(article.content).gsub("\u00A0", ""),length: 80)
     end
+
+    def set_google_calender
+        gon.google_calender_API_key = ENV['GOOGLE_CALENDER_API_KEY']
+        gon.calender_id_1 = ENV['CALENDER_ID_1']
+        gon.calender_id_2 = ENV['CALENDER_ID_2']
+    end
 end

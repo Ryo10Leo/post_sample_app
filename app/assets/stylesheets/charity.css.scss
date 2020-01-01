@@ -3,8 +3,6 @@
 #charity{
     position: relative;
     text-align: center;
-    background-image: url(../../images/charity_header.jpg);
-    background-size: cover;
     height:650px;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -39,10 +37,12 @@
     margin-right:5%;
     text-align: center;
 }
-.hd-contents h1{
+.hd-contents h2{
+    max-width: 300px;
     font-family:"Yu Mincho", "YuMincho";
     font-weight: normal;
     border-bottom: solid 2px #33691e;
+    margin: 0 auto;
     margin-bottom: 50px;
 }
 .hd-contents img{
@@ -80,7 +80,7 @@
         #charity .text {
             margin-bottom: 10px;
         }
-        .hd-contents h1{
+        .hd-contents h2{
             font-size: 18px;
         }
         .hd-contents p{
