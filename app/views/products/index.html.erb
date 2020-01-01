@@ -22,11 +22,13 @@
     </div>
 
     <div class="pro-contents">
-            <div class="grid">
-                    <%= render @products %>
-            </div>
+    <% if @products %>
+        <div class="grid">
+                <%= render @products %>
+        </div>
+        <%= will_paginate @products, previous_label: '<', next_label: '>', inner_window: 1 %>
     </div>
-
+    <% end %>
     <% if logged_in? %>
     <%= render 'layouts/new_btn'%>
 

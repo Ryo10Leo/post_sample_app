@@ -4,8 +4,7 @@ class ArticlesController < ApplicationController
 
   def index
     @article = Article.new
-    @recent_entries = Article.recent_article
-    @categories = Category.all
+    get_aside_contents
     if params[:category_id]
       @selected_category = Category.find(params[:category_id])
       @articles= Article.from_category(params[:category_id]).paginate(page: params[:page], per_page: 2)
@@ -24,12 +23,7 @@ class ArticlesController < ApplicationController
     if @article.save
       @article.save_categories(category_list)
       @articles= Article.all.paginate(page: params[:page], per_page: 2)
-      @recent_entries = Article.recent_article
-      @categories = Category.all
-      respond_to do |format|
-        format.js
-        format.html
-      end
+      get_aside_contents
     else
       render 'new'
     end
@@ -37,17 +31,12 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
-    @recent_entries = Article.recent_article
-    @categories = Category.all
+    get_aside_contents
   end
 
   def edit
     @article = Article.find(params[:id])
     @category_list = @article.categories.pluck(:name).join(",")
-    respond_to do |format|
-      format.js
-      format.html
-    end
   end
 
   def update
@@ -56,13 +45,8 @@ class ArticlesController < ApplicationController
     if @article.update_attributes(article_params)
       @article.save_categories(category_list)
       remove_not_used_cat
-      @recent_entries = Article.recent_article
-      @categories = Category.all
-      respond_to do |format|
-        @articles = Article.all
-        format.js
-        format.html{redirect_to articles_url}
-      end
+      get_aside_contents
+      @articles = Article.all
     else
       render 'edit'
     end
@@ -78,12 +62,5 @@ class ArticlesController < ApplicationController
 
     def article_params
       params.require(:article).permit(:title, :content)
-    end
-
-    def logged_in_user
-      unless logged_in?
-        flash[:danger] = "投稿機能を利用する場合は、ログインしてください。"
-        redirect_to login_url
-      end
     end
 end

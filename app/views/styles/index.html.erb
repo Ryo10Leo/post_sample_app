@@ -5,7 +5,7 @@
 <%= stylesheet_link_tag 'form.css' %>
 
     <div class="p-header">
-        <div id="product">
+        <div id="style">
                 <%= render 'layouts/header_p'%>
         </div>
     </div><!--p-header-->
@@ -22,10 +22,13 @@
     </div>
 
     <div class="style-contents">
+    <% if @styles %>
         <div class="grid">
             <%= render @styles %>
         </div>
+        <%= will_paginate @styles, previous_label: '<', next_label: '>', inner_window: 1 %>
     </div>
+    <% end %>
 
     <% if logged_in? %>
     <%= render 'layouts/new_btn'%>

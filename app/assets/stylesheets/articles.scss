@@ -30,6 +30,7 @@ article{
 }
 .post-info .post-title{
     font-weight: normal;
+    // font-family:"Yu Mincho", "YuMincho";
 }
 .post-info{
     position: relative;
@@ -156,50 +157,6 @@ aside li a:hover{
     margin-bottom: 15px;
 }
 
-//Pagenation
-.pagination{
-    list-style: none;
-    display: flex;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.pagination a{
-    color: white;
-    padding: 15px 25px;
-    text-decoration: none;
-}
-
-.pagination li{
-    background-color: #a1887f;
-    padding: 12px 0px;
-}
-
-.pagination li.active{
-    font-style: normal;
-    color: white;
-    background: #3e2723;
-    font-family: sans-serif;
-}
-
-.pagination li:hover{
-    cursor: pointer;
-}
-
-li.previous_page.disabled,
-li.next_page.disabled {
-    display: none;
-
-}
-
-li.previous_page,
-li.next_page{
-    background-color: #33691e;
-}
-li.previous_page a,
-li.next_page a{
-    color: white;
-}
 .article-tags-field{
     margin-bottom:50px;
 }
@@ -301,15 +258,6 @@ li.next_page a{
 
     #post-success-msg.active{
         bottom: 1%;
-    }
-
-
-    .pagination li {
-        padding: 10px 0px;
-    }
-
-    .pagination a {
-        padding: 18px 18px;
     }
 
 }

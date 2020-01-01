@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
       redirect_to root_url
     else
-      flash.now[:danger] = '有効なメールアドレス、またはパスワードではありません。' # 本当は正しくない
+      flash.now[:danger] = '有効なメールアドレス、またはパスワードではありません。'
       render 'new'
     end
   end
