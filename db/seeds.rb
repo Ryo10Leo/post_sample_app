@@ -27,14 +27,6 @@ Product.create(name: "なんかすごいトリートメント",
                 price: "2500",
                 description: "気になる髪になんかすごい成分配合のナンチャラが効く！",
                 picture: File.open("#{Rails.root}/test/fixtures/product5.jpg"))
-# 25.times do
-
-# Product.create(name: "すごいシャンプー",
-#                     price: "3000",
-#                     description: "どんな髪でもさらさらになる。",
-#                     picture: File.open("#{Rails.root}/test/fixtures/default.jpg"))
-
-# end
 
 Style.create(caption: "カット&カラー",
                 price: "5000",

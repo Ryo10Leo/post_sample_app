@@ -12,9 +12,10 @@ $(function () {
                 timeFormat: 'H:mm',
                 eventSources: [
                     {
-                        googleCalendarId: gon.calender_id_1,
-                        rendering: 'background',
-                        color:     '#3a87ad'
+                        googleCalendarId: gon.calender_id_1
+                        // ,
+                        // rendering: 'background',
+                        // color:     '#3a87ad'
                     },
                     {
                         googleCalendarId: gon.calender_id_2,
@@ -42,9 +43,7 @@ $(document).ready(function(){
                 timeFormat: 'H:mm',
                 eventSources: [
                 {
-                    googleCalendarId: gon.calender_id_1,
-                    rendering: 'background',
-                    color:     '#3a87ad'
+                    googleCalendarId: gon.calender_id_1
                 },
                 {
                     googleCalendarId: gon.calender_id_2,

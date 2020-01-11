@@ -52,18 +52,6 @@ function modalDisplay(){
     });
 };
 
-//LOADING
-function loading(){
-    $(document).ajaxStart(function() {
-        $('#loading').fadeIn();
-    })
-　
-    $(document).ajaxStop(function() {
-        $('#loading').fadeOut();
-    });
-};
-
-
 //Form Image Field Thumb
 function formImageThumb(){
 
@@ -116,8 +104,6 @@ document.addEventListener('DOMContentLoaded',function(){
     newFormClose();
 
     modalDisplay();
-
-    loading();
 
 },false);
 

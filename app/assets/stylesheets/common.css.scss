@@ -864,7 +864,6 @@ position: relative;
 .calender-text .blue {
     padding: 2px 8px;
     background: #3a87ad;
-    opacity: .3;
     border-radius: 2px;
 }
 
@@ -1639,31 +1638,31 @@ li.next_page a{
     opacity : 0;
     transform : translate(0, 55px);
     transition : all .7s;
-    }
+}
 
 .effect-fade-up.effect-scroll {
     opacity : 1;
     transform : translate(0, 0);
-    }
+}
 
 .effect-fade-down {
     opacity : 0;
     transform : translate(0, -40px);
     transition : all .7s;
-    }
+}
 
 .effect-fade-down.effect-scroll {
     opacity : 1;
     transform : translate(0, 0);
-    }
+}
 
 .home-img-fade-up {
     opacity: 0;
     transform : translate(0, 40px);
     transition : all .7s;
-    }
+}
 
 .home-img-fade-up.effect-scroll{
     opacity : 1;
     transform : translate(0, 0);
-    }
+}

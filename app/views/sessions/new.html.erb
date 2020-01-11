@@ -17,19 +17,13 @@
 <div class="p-header">
     <div id="login">
             <%= render 'layouts/header_p'%>
-</div>
+    </div>
 </div><!--p-header-->
+
   <div id="form">
     <h1>Login</h1>
-    <% if flash[:danger] %>
-      <% flash.each do |message_type, message| %>
-      <div class="alert alert-<%= message_type %>">
-        <%= message %>
-      </div>
-    <% end %>
-    <% else %>
-      <p class="form-msg">こちらは管理人専用ページです。</p>
-     <% end %>
+    <%= render 'sessions/alert' %>
+
     <%= form_for(:session, url: login_path) do |f| %>
 
       <div class="form-item">

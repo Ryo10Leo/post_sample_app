@@ -1,7 +1,6 @@
 <% provide(:button_text, '投稿する') %>
 
 <div class="js-form-close"><i class="fa fa-times-circle"></i></div>
-<div id="loading" style="display:none;"><%= image_tag 'shared/loading.gif' %></div>
 <div class="wrapper">
     <h1 class="form-title">商品新規投稿</h1>
 
@@ -37,8 +36,6 @@
       </div>
     <%= f.file_field :picture, class: "image", style: "display:none;", id: "file",
                                accept: 'image/jpeg,image/gif,image/png'%>
-
-    <%#<%= f.hidden_field :picture_cache %>
 
     <%= f.submit yield(:button_text), class: "submit-btn" %>
     <% end %>

@@ -19,7 +19,6 @@
 .news-contents{
     display: flex;
     justify-content: space-between;
-    // margin-bottom: 50px;
 }
 .articles{
     position: relative;
@@ -240,6 +239,12 @@ aside li a:hover{
 
     .show-icon {
         bottom: -10%;
+    }
+
+    .post-content img{
+        object-fit: cover;
+        width: 100% !important;
+        height: auto !important;
     }
 
     #post-success-msg{

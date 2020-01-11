@@ -21,8 +21,6 @@ config.toolbar = [
 
   config.removeButtons='Source,Font,FontSize,HorizontalRule,Anchor,Blockquote,Styles,Format,RemoveFormat'
 
-  config.disallowedContent = 'img{width,height}';
-  config.extraAllowedContent = 'img[width,height]';
   config.image_prefillDimensions = false;
 };
 
@@ -31,14 +29,6 @@ CKEDITOR.on('dialogDefinition', function (ev) {
   var dialogDefinition = ev.data.definition;
 
   if (dialogName === 'image') {
-      var uploadTab = dialogDefinition.getContents('Upload');
-      if (uploadTab) {
-          var upload = uploadTab.get('upload');
-          if (upload) upload.label = '画像を選択してください';
-
-          var uploadButton = uploadTab.get('uploadButton');
-          if (uploadButton) uploadButton.label = 'アップロード';
-      }
 
       var infoTab = dialogDefinition.getContents('info');
       if (infoTab) {
@@ -50,14 +40,14 @@ CKEDITOR.on('dialogDefinition', function (ev) {
           infoTab.remove('cmbAlign');
 
           var browse = infoTab.get('browse');
-          if (browse) browse.label = 'アップロード済みの画像を選択';
+          if (browse) browse.label = '画像アップロードor画像を選択';
       }
 
       // remove unnecessary tabs
       if (dialogDefinition.getContents('Link')) dialogDefinition.removeContents('Link');
       if (dialogDefinition.getContents('advanced')) dialogDefinition.removeContents('advanced');
+      if (dialogDefinition.getContents('Upload')) dialogDefinition.removeContents('Upload');
   }
 });
 
 CKEDITOR.addCss('.cke_editable img { width: 90px !important; height: auto !important; }');
-
