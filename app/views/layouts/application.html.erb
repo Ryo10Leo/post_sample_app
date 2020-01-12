@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <%= favicon_link_tag('shared/favicon.png') %>
+    <%= favicon_link_tag('shared/favicon.png',
+                     {:rel => 'apple-touch-icon',
+                      :sizes => '180x180',
+                      :type => 'image/png'}) %>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all'%>
