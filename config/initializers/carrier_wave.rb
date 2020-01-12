@@ -9,6 +9,12 @@ if Rails.env.production?
       }
       config.fog_directory     =  ENV['S3_BUCKET']
     end
-    config.root = "/var/www/app"
-  config.cache_dir = "/var/www/app/uploads/tmp"
+
   end
+
+if Rails.env.development?
+  CarrierWave.configure do |config|
+    config.root = "/var/www/app"
+    config.cache_dir = "/var/www/app/uploads/tmp"
+  end
+end
