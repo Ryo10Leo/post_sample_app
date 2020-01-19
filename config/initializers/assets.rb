@@ -11,4 +11,4 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
-Rails.application.config.assets.precompile += %w( common.js common.css index.js charity.css products.css product.js form.css form.css sessions.css sessions.js styles.css style.js articles.css article.js ckeditor/config.js calender.js gcal.js)
+Rails.application.config.assets.precompile += %w( common.js common.css index.js charity.css products.css product.js form.css form.css sessions.css sessions.js styles.css style.js articles.css article.js ckeditor/config.js calender.js gcal.js bgswitcher.js bgswitcher_config.js)

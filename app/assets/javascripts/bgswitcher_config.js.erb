@@ -1,0 +1,10 @@
+jQuery(function($) {
+  $('#home').bgSwitcher({
+   images: ['<%= image_url("home/home-bg1.JPG") %>','<%= image_url("home/home-bg2.JPG") %>','<%= image_url("home/home-bg3.JPG") %>'],
+　 interval: 3000,
+　 loop: true,
+　 effect: "fade", // fade,blind,clip,slide,drop,hide
+　 duration: 800,
+　 easing: "swing" // linear,swing
+   });
+  });
