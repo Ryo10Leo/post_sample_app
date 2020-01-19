@@ -1,9 +1,24 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  caption: MyString
-  price: MyString
 
-two:
-  caption: MyString
-  price: MyString
+cut:
+  id: 1
+  caption: "cut"
+  price: "3000"
+  created_at: <%= 3.years.ago %>
+  picture: "model_sample1.jpg"
+
+color:
+  id: 2
+  caption: "color"
+  price: "4000"
+  created_at: <%= 2.hours.ago %>
+  picture: "model_sample2.jpg"
+
+
+dressing:
+  id: 3
+  caption: "dressing"
+  price: "5000"
+  created_at: <%= Time.zone.now %>
+  picture: "model_sample3.jpg"
+

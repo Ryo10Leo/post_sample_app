@@ -6,10 +6,6 @@ class ProductTest < ActiveSupport::TestCase
     @product = products(:shampoo)
   end
 
-  # test "should be valid" do
-  #   assert @product.valid?
-  # end
-
   test "product name should be present" do
     @product.name = nil
     assert_not @product.valid?
