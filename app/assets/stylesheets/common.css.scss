@@ -225,7 +225,7 @@ color: #33691e;
 #home{
     // background-image: image-url("home/IMG_2929.JPG");
     background-size: cover;
-    background-position: 0% 100%;
+    background-position: center center;
     background-repeat: no-repeat;
     height: 650px;
     margin-bottom: 45px;
@@ -1167,8 +1167,12 @@ li.next_page a{
         width: 150px;
         margin-top: 14px;
     }
-    #home {
-        background-position: 8% 100%;
+    #home-mobile{
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 650px;
+        margin-bottom: 45px;
     }
 
     /* HEADER */
