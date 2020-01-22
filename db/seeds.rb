@@ -52,11 +52,14 @@ Style.create(caption: "カット&カラー",
                 price: "5000",
                 picture: File.open("#{Rails.root}/test/fixtures/model_sample6.jpg"))
 
-User.create(name: ENV['USER_1_NAME'], email: ENV['USER_1_EMAIL'],
-            password: ENV['USER_1_PASSWORD'], password_confirmation: ENV['USER_1_PASSWORD_CONFIRMATION'])
+User.create(name: "Ryo Iwata", email: "ryo.bbl9@gmail.com",
+                password: "mimuratoeregansu", password_confirmation: "mimuratoeregansu")
+    
+# User.create(name: ENV['USER_1_NAME'], email: ENV['USER_1_EMAIL'],
+#             password: ENV['USER_1_PASSWORD'], password_confirmation: ENV['USER_1_PASSWORD_CONFIRMATION'])
 
-User.create(name: ENV['USER_2_NAME'], email: ENV['USER_2_EMAIL'],
-            password: ENV['USER_2_PASSWORD'], password_confirmation: ENV['USER_2_PASSWORD_CONFIRMATION'])
+# User.create(name: ENV['USER_2_NAME'], email: ENV['USER_2_EMAIL'],
+#             password: ENV['USER_2_PASSWORD'], password_confirmation: ENV['USER_2_PASSWORD_CONFIRMATION'])
 
 
 Article.create(title:"髪の豆知識",
