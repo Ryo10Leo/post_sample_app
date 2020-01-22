@@ -651,9 +651,10 @@ border-right:solid 3px #33691e ;
     padding-bottom:20px;
 }
 .detail-btn{
+    color: white;
     position: relative;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 10px 20px;
     width: 250px;
     height:50px;
     background-color: #5e4037;
@@ -752,7 +753,7 @@ flex-basis: 50%;
 position: relative;
 }
 .paypay{
-    margin-left: 15%;
+    justify-content: center;
     margin-top: 2%;
     display: flex;
     align-items: center;

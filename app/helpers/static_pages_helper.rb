@@ -8,7 +8,7 @@ module StaticPagesHelper
             image[0]
     #画像がなけれがデフォルト画像を取得
         else
-            image_tag 'home/thumb_defalut.jpg'
+            image_tag 'home/thumb_defalut.png'
         end
     end
 
