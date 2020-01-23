@@ -27,60 +27,8 @@
 <%= render 'static_pages/home/staff' %>
 
 
-
-<div class="pro-news-wrapper">
-    <div id="product-part">
-        <div class="wrapper">
-            <h2 class="page-title"><span>-</span>Product<span>-</span></h2>
-        </div><!--/.wrapper-->
-        <div class="contents">
-            <p>ratio美容室オススメの商品をご紹介します。</p>
-            <%= image_tag 'home/home_product_sample.jpg'%>
-            <div class="detail-btn"><a href="product.html">詳細はこちら</a></div>
-        </div><!--contents-->
-    </div><!--product-part-->
-    <div id="news-part">
-        <div class="wrapper">
-            <h2 class="page-title"><span>-</span>News<span>-</span></h2>
-        </div><!--/.wrapper-->
-        <ul class="posts">
-            <a href="#">
-                <li>
-                    <div class="post-cont-wrapper">
-                        <div class="post-image"><%= image_tag 'home/news_thumb1.jpg'%></div>
-                        <div class="post-body">
-                            <div class="post-meta">2019.11.14</div>
-                            <div class="post-title"><span>価格変更のお知らせ</span></div>
-                        </div>
-                    </div>
-                </li>
-            </a>
-            <a href="#">
-                    <li>
-                            <div class="post-cont-wrapper">
-                            <div class="post-image"><%= image_tag 'home/news_thumb2.jpg'%></div>
-                            <div class="post-body">
-                                <div class="post-meta">2019.10.09</div>
-                                <div class="post-title">学割キャンペーン実施中</div>
-                            </div>
-                            </div>
-                    </li>
-            </a>
-            <a href="#">
-                <li>
-                        <div class="post-cont-wrapper">
-                            <div class="post-image"><%= image_tag 'home/news_thumb3.jpg'%></div>
-                            <div class="post-body">
-                                <div class="post-meta">2019.10.02</div>
-                                <div class="post-title">台風に伴う臨時休業のお知らせ</div>
-                            </div>
-                        </div>
-                </li>
-            </a>
-        </ul><!--posts-->
-    </div><!--news-part-->
-</div><!--pro-news-part-->
-
+<!--pro-blogs-part-->
+<%= render 'static_pages/home/product_and_blogs' %>
 
 <!-- Access -->
 <%= render 'static_pages/home/access' %>

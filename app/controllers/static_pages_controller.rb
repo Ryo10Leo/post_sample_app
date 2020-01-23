@@ -4,6 +4,7 @@ class StaticPagesController < ApplicationController
 
   def home
     @top_news = Article.limit(3)
+    @blogs = Article.blogs
     set_google_calender
   end
 
