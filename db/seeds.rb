@@ -30,27 +30,27 @@ Product.create(name: "ハンドクリーム",
 
 Style.create(caption: "カット&カラー",
                 price: "5000",
-                picture: File.open("#{Rails.root}/test/fixtures/files/model_sample1.jpg"))
+                picture: File.open("#{Rails.root}/test/fixtures/files/model_sample01.jpg"))
+
+Style.create(caption: "カット",
+                price: "2500",
+                picture: File.open("#{Rails.root}/test/fixtures/files/model_sample02.jpg"))
+
+Style.create(caption: "着付け＆メイク",
+                price: "5000",
+                picture: File.open("#{Rails.root}/test/fixtures/files/model_sample03.jpg"))
+
+Style.create(caption: "カット",
+                price: "1500",
+                picture: File.open("#{Rails.root}/test/fixtures/files/model_sample04.jpg"))
+
+Style.create(caption: "ヘアーアップ",
+                price: "3500",
+                picture: File.open("#{Rails.root}/test/fixtures/files/model_sample05.jpg"))
 
 Style.create(caption: "カット&カラー",
-                price: "5000",
-                picture: File.open("#{Rails.root}/test/fixtures/files/model_sample2.jpg"))
-
-Style.create(caption: "カット&カラー",
-                price: "5000",
-                picture: File.open("#{Rails.root}/test/fixtures/files/model_sample3.jpg"))
-
-Style.create(caption: "カット&カラー",
-                price: "5000",
-                picture: File.open("#{Rails.root}/test/fixtures/files/model_sample4.jpg"))
-
-Style.create(caption: "カット&カラー",
-                price: "5000",
-                picture: File.open("#{Rails.root}/test/fixtures/files/model_sample5.jpg"))
-
-Style.create(caption: "カット&カラー",
-                price: "5000",
-                picture: File.open("#{Rails.root}/test/fixtures/files/model_sample6.jpg"))
+                price: "8000",
+                picture: File.open("#{Rails.root}/test/fixtures/files/model_sample06.jpg"))
 
 
 User.create(name: ENV['USER_1_NAME'], email: ENV['USER_1_EMAIL'],

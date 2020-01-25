@@ -513,6 +513,16 @@ li.next_page a{
     .menu__second-level li a:hover {
         color: #fff59d;
     }
+        /* GRID */
+
+    .grid {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .item img {
+        height: 200px;
+    }
 
     /* FOOTER */
 
