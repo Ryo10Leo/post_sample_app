@@ -13,9 +13,7 @@ Rails.application.routes.draw do
 
   resources :articles
 
-  root 'static_pages#home'
-  get  '/home',    to: 'static_pages#home'
-  get  '/charity',    to: 'static_pages#charity'
+  root 'sessions#new'
 
   get      '/login',  to: 'sessions#new'
   post     '/login',  to: 'sessions#create'

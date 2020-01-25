@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def new
-    redirect_to root_path if current_user
+    redirect_to articles_path if current_user
   end
 
   def create
@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in user
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-      redirect_to root_url
+      redirect_to articles_path
     else
       flash.now[:danger] = '有効なメールアドレス、またはパスワードではありません。'
       render 'new'

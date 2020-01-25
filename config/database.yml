@@ -23,7 +23,4 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  database: ratio_production
-  user: <%= ENV['RAILS_DATABASE_USERNAME'] %>
-  password: <%= ENV['RAILS_DATABASE_PASSWORD'] %>
   encoding: utf8

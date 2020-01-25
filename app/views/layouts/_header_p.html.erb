@@ -1,23 +1,12 @@
 <header class="page-header wrapper">
     <h1>
-        <%= link_to root_path do %>
         <%= image_tag 'home/ratio_logo.png' ,class: 'logo' %>
-        <% end %>
     </h1>
     <nav>
         <ul class="main-nav">
-            <li><%= link_to 'Home', root_path %></li>
             <li><%= link_to 'News', articles_path  %></li>
-            <li class="menu__single"><a>About</a>
-                <ul class="menu__second-level">
-                    <li><%= link_to 'Concept', root_path(anchor: 'concept')%></li>
-                    <li><%= link_to 'Staff', root_path(anchor: 'staff')%></li>
-                </ul>
-            </li>
-            <li><%= link_to 'Menu', root_path(anchor: 'menu')%></li>
             <li><%= link_to 'Style', styles_path %></li>
             <li><%= link_to 'Product', products_path %></li>
-            <li><%= link_to 'Access', root_path(anchor: 'access')%></li>
              <% if logged_in? %>
             <li>
                 <%= link_to "Log out", logout_path, method: :delete %>

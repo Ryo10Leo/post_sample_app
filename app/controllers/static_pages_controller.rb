@@ -7,7 +7,4 @@ class StaticPagesController < ApplicationController
     @blogs = Article.blogs
     set_google_calender
   end
-
-  def charity
-  end
 end
