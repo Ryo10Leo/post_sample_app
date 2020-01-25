@@ -322,7 +322,7 @@ GEM
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
-    puma (3.9.1)
+    puma (3.12.2)
     puma_worker_killer (0.1.1)
       get_process_mem (~> 0.2)
       puma (>= 2.7, < 5)
@@ -457,7 +457,7 @@ DEPENDENCIES
   minitest-reporters (= 1.1.14)
   momentjs-rails
   pg (= 0.20.0)
-  puma (= 3.9.1)
+  puma (= 3.12.2)
   puma_worker_killer
   rails (= 5.1.6)
   rails-controller-testing (= 1.0.2)
