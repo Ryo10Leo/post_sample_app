@@ -6,6 +6,7 @@
 
 ポートフォリオの詳細な解説記事は[こちら](https://ryo10leo.hatenablog.com/entry/2020/02/02/204150)
 
+## 機能一覧
 - ログイン機能( Remember me 機能付 )
 - コンテンツ一覧動的表示機能( *.html.erb )
 - コンテンツモーダルウィンドウ表示( CSS, jQuery )
