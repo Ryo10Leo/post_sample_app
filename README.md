@@ -2,7 +2,7 @@
 
 [ポートフォリオサイト](https://salon-ratio.com)で使われている機能をサンプルサイトで一部公開。
 
-[サンプルサイト](https://postsampleapp.herokuapp.com/)
+こちらのソースでできた[サンプルサイト](https://postsampleapp.herokuapp.com/)では、投稿機能をお試しできます。
 
 ポートフォリオの詳細な解説記事は[こちら](https://ryo10leo.hatenablog.com/entry/2020/02/02/204150)
 
