@@ -20,3 +20,4 @@
 - 未使用カテゴリー自動削除機能( 記事更新時にSQLで未使用のカテゴリを抽出して、 DBから削除 )
 - ページネーション機能( will_pagenate )
  Docker, docker-composeを使った開発環境構築( Nginx, Puma, PostgreSQL )
+- レスポンシブデザイン
