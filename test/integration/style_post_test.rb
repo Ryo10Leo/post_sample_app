@@ -24,7 +24,7 @@ class StylesControllerTest < ActionDispatch::IntegrationTest
         assert_difference 'Style.count',1 do
           post styles_path, xhr:true, params: { style:{ caption: 'so good shampoo',
                                                     price: '2000',
-                                                    picture: fixture_file_upload(Rails.root.join('test','fixtures','model_sample1.jpg')) }}
+                                                    picture: fixture_file_upload(Rails.root.join('test','fixtures','files','model_sample01.jpg')) }}
         end
     end
 
@@ -33,7 +33,7 @@ class StylesControllerTest < ActionDispatch::IntegrationTest
         assert_no_difference 'Style.count',1 do
           post styles_path, xhr:true, params: { style:{ caption: 'cut',
                                                     price: '2000',
-                                                    picture: fixture_file_upload(Rails.root.join('test','fixtures','model_sample1.jpg')) }}
+                                                    picture: fixture_file_upload(Rails.root.join('test','fixtures','files','model_sample01.jpg')) }}
         end
     end
 
@@ -44,7 +44,7 @@ class StylesControllerTest < ActionDispatch::IntegrationTest
         get edit_style_path(@style), xhr:true
         patch style_path(@style), xhr:true, params: { style:{ caption: 'cut & color',
                                                     price: '3000',
-                                                    picture: fixture_file_upload(Rails.root.join('test','fixtures','model_sample2.jpg'))
+                                                    picture: fixture_file_upload(Rails.root.join('test','fixtures','files','model_sample02.jpg'))
                                                      }}
     end
 
@@ -54,7 +54,7 @@ class StylesControllerTest < ActionDispatch::IntegrationTest
         get edit_style_path(@style), xhr:true
         patch style_path(@style), xhr:true, params: { style:{ caption: 'so good shampoo2',
                                                     price: '3000',
-                                                    picture: fixture_file_upload(Rails.root.join('test','fixtures','model_sample3.jpg'))
+                                                    picture: fixture_file_upload(Rails.root.join('test','fixtures','files','model_sample03.jpg'))
                                                     }}
     end
 
@@ -77,7 +77,7 @@ class StylesControllerTest < ActionDispatch::IntegrationTest
         price = '3500'
         patch style_path(@style), xhr:true, params: { style:{ caption: caption,
                                                                       price: price,
-                                                                      picture: fixture_file_upload(Rails.root.join('test','fixtures','model_sample3.jpg'))
+                                                                      picture: fixture_file_upload(Rails.root.join('test','fixtures','files','model_sample03.jpg'))
                                                             }}
         assert flash.empty?
         @style.reload

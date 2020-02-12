@@ -25,7 +25,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
           post products_path, xhr:true, params: { product:{ name: 'so good shampoo',
                                                     price: '2000',
                                                     description: 'so good shampoo',
-                                                    picture: fixture_file_upload(Rails.root.join('test','fixtures','product1.jpg')) }}
+                                                    picture: fixture_file_upload(Rails.root.join('test','fixtures','files','product1.jpg')) }}
         end
     end
 
@@ -35,7 +35,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
           post products_path, xhr:true, params: { product:{ name: 'so good shampoo',
                                                     price: '2000',
                                                     description: 'so good shampoo',
-                                                    picture: fixture_file_upload(Rails.root.join('test','fixtures','product1.jpg')) }}
+                                                    picture: fixture_file_upload(Rails.root.join('test','fixtures','files','product1.jpg')) }}
         end
     end
 
@@ -47,7 +47,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
         patch product_path(@product), xhr:true, params: { product:{ name: 'so good shampoo2',
                                                     price: '3000',
                                                     description: 'so good shampoo!!!',
-                                                    picture: fixture_file_upload(Rails.root.join('test','fixtures','product2.jpg'))
+                                                    picture: fixture_file_upload(Rails.root.join('test','fixtures','files','product2.jpg'))
                                                      }}
     end
 
@@ -58,7 +58,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
         patch product_path(@product), xhr:true, params: { product:{ name: 'so good shampoo2',
                                                     price: '3000',
                                                     description: 'so good shampoo!!!',
-                                                    picture: fixture_file_upload(Rails.root.join('test','fixtures','product3.jpg'))
+                                                    picture: fixture_file_upload(Rails.root.join('test','fixtures','files','product3.jpg'))
                                                     }}
     end
 
@@ -84,7 +84,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
         patch product_path(@product), xhr:true, params: { product:{ name: name,
                                                                       price: price,
                                                                       description: description,
-                                                                      picture: fixture_file_upload(Rails.root.join('test','fixtures', 'product3.jpg'))
+                                                                      picture: fixture_file_upload(Rails.root.join('test','fixtures','files','product3.jpg'))
                                                                     }}
         assert flash.empty?
         @product.reload
